@@ -8,14 +8,14 @@
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
 }
 
 #pageLabel {
     font-size: 1.5rem;
     color: var(--colorShadeA);
     font-weight: 700;
-    font-family: 'Short Stack';
+    font-family: 'Raleway';
     text-align: center;
     width: 100%;
 }

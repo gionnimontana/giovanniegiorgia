@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import ListaNozze from './ListaNozze/ListaNozze';
 import Menu from './Menu/Menu';
 import Page from './Page/Page';
 
@@ -23,7 +24,7 @@ function App() {
       )}
       {currentView === 'listaNozze' && (
         <Page label="Lista nozze" goBack={goBack} >
-          <div> Page Content</div>
+          <ListaNozze/>
         </Page>
       )}
 
