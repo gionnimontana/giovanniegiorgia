@@ -13,13 +13,13 @@ const ListaNozze = () => {
             id:"V2",
             img: 'https://qtxasset.com/styles/breakpoint_sm_default_480px_w/s3/fiercepharma/1610037461/GettyImages-1136437406.jpg/GettyImages-1136437406.jpg?VersionId=lKL0To.RG2Hc7qtD3t1UWLR6idJOG5ng&itok=FE3sBy4U',
             title: '3 notti a SAN FRANCISCO',
-            text: 'Stanford Court San Francisco 4*',
+            text: 'Dalle Painted Ladies ad Alcatraz, da North Beach alla 49-Mile Drive, da Mission al Golden Gate Bridge',
         },
         {
             id:"V3",
             img: 'https://www.flightcentre.ca/blog/wp-content/uploads/2016/03/iStock-California-road-trip.jpg',
             title: 'Noleggio auto e carburante',
-            text: 'California on the road ',
+            text: "'Se un uomo apre la portiera dell’auto alla moglie, o è nuova l’auto o è nuova la moglie'",
         },
         {
             id:"V4",
@@ -37,13 +37,13 @@ const ListaNozze = () => {
             id:"V5",
             img: 'https://cdn.getyourguide.com/img/location/5ffeb496e3e09.jpeg/88.jpg',
             title: '1 notte a Las Vegas',
-            text: 'The Mirage',
+            text: "Quello che succede a Las Vegas rimane a Las Vegas...tranne l'herpes, quello torna con te. ",
         },
         {
             id:"V5",
             img: 'https://www.dove-e-quando.it/site/images/illustration/bryce-canyon.jpg',
             title: 'BRYCE CANYON',
-            text: "“ ",
+            text: " ",
         },
         {
             id:"V5",
@@ -91,6 +91,12 @@ const ListaNozze = () => {
             id:"V5",
             img: 'https://www.theartofbusinesstravel.com/wp-content/uploads/2020/05/csm_2382_03_0002short_15a3c8fbe8.jpg',
             title: 'Volo Papeete-Los Angeles-Francoforte-Milano',
+            text: '',
+        },
+        {
+            id:"V5",
+            img: 'https://s3-eu-west-1.amazonaws.com/miodottore.it/doctor/e4672d/e4672d8cb8e89c4f7a7a78093abd624b_large.jpg',
+            title: 'TAMPONI',
             text: '',
         },
     ]
