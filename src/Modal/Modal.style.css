@@ -2,7 +2,7 @@
     display: none; 
     position: fixed; 
     z-index: 1; 
-    padding-top: 100px; 
+    padding-top: 6rem; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -79,5 +79,6 @@
     .modal-content {
       height: 90vh;
       margin-top: -5rem;
+      width: 88%;
     }
   }
