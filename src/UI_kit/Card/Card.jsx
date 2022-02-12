@@ -1,6 +1,5 @@
 import React from "react";
 import Modal from "../Modal/Modal";
-import PayementOptions from "../PaymentOptions/PaymentOptions";
 import './Card.style.css'
 
 const Card = (p) => {
@@ -24,7 +23,7 @@ const Card = (p) => {
                             <img className="cardImageLarge" src={p.img} />
                         </div>
                     </div>
-                    <PayementOptions id={p.id}/>
+                    {p.children}
                 </Modal>
             </div>
         </div>

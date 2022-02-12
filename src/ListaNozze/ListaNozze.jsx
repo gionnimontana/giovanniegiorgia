@@ -1,4 +1,5 @@
-import Card from "../Card/Card";
+import Card from "../UI_kit/Card/Card";
+import PayementOptions from "../PaymentOptions/PaymentOptions";
 
 const ListaNozze = () => {
 
@@ -110,7 +111,9 @@ const ListaNozze = () => {
                     img={el.img}
                     title={el.title}
                     text={el.text}
-                />
+                >
+                    <PayementOptions id={el.id}/>
+                </Card>
             ))}
         </div>
     )

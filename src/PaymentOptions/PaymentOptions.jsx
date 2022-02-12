@@ -1,5 +1,5 @@
 import React from 'react'
-import ExpansionPanel from '../ExpansionPanel/ExpansionPanel'
+import ExpansionPanel from '../UI_kit/ExpansionPanel/ExpansionPanel'
 import './PaymentOptions.css'
 
 const PayementOptions = (p) => {

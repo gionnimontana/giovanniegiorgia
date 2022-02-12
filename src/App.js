@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import ListaNozze from './ListaNozze/ListaNozze';
 import Menu from './Menu/Menu';
-import Page from './Page/Page';
+import Page from './UI_kit/Page/Page';
 
 function App() {
   const [currentView, setCurrentView] = useState('menu')
