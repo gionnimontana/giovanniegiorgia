@@ -5,7 +5,7 @@ import './Card.style.css'
 
 const Card = (p) => {
     return (
-        <div className="cardContainer">
+        <div className="cardContainer borderBottom">
             <div className="cardImageContainer">
                 <img className="cardImage" src={p.img} />
             </div>

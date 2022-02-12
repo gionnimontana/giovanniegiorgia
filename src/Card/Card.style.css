@@ -19,7 +19,6 @@
 }
 
 .cardImageLargeContainer {
-    border: 2px solid var(--colorShadeA);
     border-radius: 1em;
     order: 0;
     width: 100%;
@@ -34,7 +33,6 @@
 .cardContainer {
     display: flex;
     padding: 1.5rem 0rem;
-    border-bottom: solid 1px var(--colorShadeB);
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -42,10 +40,6 @@
 
 .cardOpenModalButton {
     order: 2;
-}
-
-.cardContainer:last-child {
-    border-bottom:initial;
 }
 
 .cardContent {

@@ -1,0 +1,41 @@
+.expansion_panel_collapsible {
+    background-color: var(--colorShadeB);
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 1rem;
+  }
+  
+  .expansion_panel_active {
+    background-color: var(--colorShadeA);
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
+
+  .expansion_panel_collapsible:hover {
+    background-color: var(--colorShadeA);
+  }
+  
+  .expansion_panel_content {
+    padding: 1rem;
+    transition: max-height 0.2s ease-out;
+    background-color: var(--colorShadeE);
+    border-radius: 0rem 0rem 1rem 1rem;
+  }
+
+  .expansion_panel_collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .expansion_panel_active:after {
+    content: "\2212";
+  }
+  

@@ -1,0 +1,21 @@
+.payment_option_text {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.payment_option_line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment_option_field {
+    width: 4rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.payment_option_value {
+    width: 17rem;
+}
