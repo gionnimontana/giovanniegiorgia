@@ -17,5 +17,14 @@
 }
 
 .payment_option_value {
-    width: 17rem;
+    width: 20rem;
+}
+
+.payment_option_img_box {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#payment_option_satispay_img {
+    width: 15rem;
 }
