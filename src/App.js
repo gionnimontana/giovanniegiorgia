@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Info from './Info/Info';
 import ListaNozze from './ListaNozze/ListaNozze';
 import Menu from './Menu/Menu';
 import Page from './UI_kit/Page/Page';
@@ -14,7 +15,7 @@ function App() {
       {currentView === 'menu' && <Menu setView={setCurrentView}/>}
       {currentView === 'info' && (
         <Page label="Info" goBack={goBack} >
-          <div> Page Content</div>
+          <Info/>
         </Page>
       )}
       {currentView === 'ricevimento' && (
