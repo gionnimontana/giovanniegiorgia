@@ -52,18 +52,18 @@ const PayementOptions = (p) => {
             <div style={{height: "0.5rem"}}/>
             <ExpansionPanel title="Criptovalute (BTC o ETH)">
                 <div className="payment_option_text">
-                    Sei un vero 
+                    Vuoi donare in crypto? nessun problema! invia una somma di tua scelta a uno di questi indirizzi
                 </div>
                 <div className="payment_option_line">
-                    <div className="payment_option_field">Utente:</div>
-                    <div className="payment_option_value">
-                        Giovanni Montanari
+                    <div className="payment_option_field">Bitcoin:</div>
+                    <div style={{width: '22rem'}}   className="payment_option_value">
+                        <CopyTextCell text="bc1qaff4y2c69ngdjnae4cmny4vn3urqm8k4s8lxfp"/>
                     </div>
                 </div>
                 <div className="payment_option_line">
-                    <div className="payment_option_field">Commento:</div>
-                    <div className="payment_option_value">
-                        <CopyTextCell text={p.id}/>
+                    <div className="payment_option_field">Ethereum:</div>
+                    <div style={{width: '22rem'}}  className="payment_option_value">
+                        <CopyTextCell text="0x5419568535B4D8Cbd26BbdA69fb5D6E15c79617d"/>
                     </div>
                 </div>
                 <div className="payment_option_img_box">

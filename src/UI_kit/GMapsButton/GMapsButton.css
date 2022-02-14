@@ -1,10 +1,11 @@
-.CTC_container {
+.GMapsButton_container {
   display: flex;
   align-items: center;
   height: 2.5rem;
+  justify-content: center;
 }
 
-.CTC_copyButton {
+.GMapsButton_copyButton {
   margin-right: 0.5rem;
   padding: 0.1rem;
   background: var(--colorShadeA);
@@ -15,7 +16,7 @@
   text-align: center;
 }
 
-.CTC_copyButton:hover,
-.CTC_copyButton:focus{
+.GMapsButton_copyButton:hover,
+.GMapsButton_copyButton:focus{
   background: var(--colorShadeC);
 }

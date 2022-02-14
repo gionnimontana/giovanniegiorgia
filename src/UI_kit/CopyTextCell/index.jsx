@@ -12,17 +12,17 @@ const CopyTextCell = ({text}) => {
       const txt = copyText.innerText
       navigator.clipboard.writeText(txt)
       setButtonIcon('check')
-      setTimeout(() => setButtonIcon('copy'), 2000)
+      setTimeout(() => setButtonIcon('copy'), 1500)
     }
   }
 
 
   return (
     <div id={containerId} className="CTC_container">
-      <div id={textId}>{text}</div>
-      <div className="CTC_copyButton" onClick={copyFunction}>
+       <div className="CTC_copyButton" onClick={copyFunction}>
         <i className={`fa fa-${buttonIcon} CTC_copyIcon`}></i>
       </div>
+      <div id={textId}>{text}</div>
     </div>
   );
 };
