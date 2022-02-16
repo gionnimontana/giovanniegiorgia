@@ -97,3 +97,9 @@ button.cake-button:active::before {
 .borderBottom:last-child {
   border-bottom:initial;
 }
+
+@media only screen and (max-width: 600px) {
+  .standardBox {
+    padding: 1em 0.8em;
+  }
+}
