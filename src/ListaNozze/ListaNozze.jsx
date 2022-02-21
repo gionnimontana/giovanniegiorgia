@@ -60,7 +60,7 @@ const ListaNozze = () => {
         },
         {
             id:"V10",
-            img: 'https://www.nuoveali.it/data/foto/768x768/COPERTINA%20GRAND%20CANYON.jpg',
+            img: 'https://www.outsideonline.com/wp-content/uploads/2018/11/20/outside-guide-grand-canyon_h.jpg?width=1200',
             title: 'GRAND CANYON',
             text: '',
         },
@@ -96,9 +96,9 @@ const ListaNozze = () => {
         },
         {
             id:"V16",
-            img: 'https://s3-eu-west-1.amazonaws.com/miodottore.it/doctor/e4672d/e4672d8cb8e89c4f7a7a78093abd624b_large.jpg',
+            img: 'https://immagini.quotidiano.net/?url=http%3A%2F%2Fp1014p.quotidiano.net%3A80%2Fpolopoly_fs%2F1.7220253.1643190294%21%2FhttpImage%2Fimage.jpg_gen%2Fderivatives%2Fwidescreen%2Fimage.jpg&w=660&h=368',
             title: 'TAMPONI',
-            text: '',
+            text: 'Perchè senza tamponi non si va da nessuna parte',
         },
     ]
 

@@ -3,6 +3,7 @@ import './App.css';
 import Info from './Info/Info';
 import ListaNozze from './ListaNozze/ListaNozze';
 import Menu from './Menu/Menu';
+import Ricevimento from './Ricevimento/Ricevimento';
 import Page from './UI_kit/Page/Page';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       )}
       {currentView === 'ricevimento' && (
         <Page label="Ricevimento" goBack={goBack} >
-          <div> Page Content</div>
+          <Ricevimento/>
         </Page>
       )}
       {currentView === 'listaNozze' && (

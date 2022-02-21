@@ -13,7 +13,7 @@ const Card = (p) => {
                 <div className="cardText">{p.text}</div>
             </div>
             <div className="cardOpenModalButton">
-                <Modal id={p.id} title="Regalaci un momento felice :)">
+                <Modal id={p.id} title="">
                     <div className="cardContainer">
                         <div className="cardContent">
                             <div className="cardTitle">{p.title}</div>
