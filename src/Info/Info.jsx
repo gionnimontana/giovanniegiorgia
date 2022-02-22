@@ -10,14 +10,12 @@ const Info = () => {
                 <img alt="foto_chiesa" className="info_ImageLarge" src="https://www.comoeilsuolago.it/img/chiesa-tremezzo.jpg"/>
             </div>
             <div className="info_marginTop info_italic">CERIMONIA</div>
-
             <div className="info_marginTop">Chiesa San Lorenzo</div>
             <GMapsButton
-                text="Piazza Sagrado San Lorenzo 2, Tremezzo CO"
+                text="Piazza Sagrado San Lorenzo 2"
                 address="https://goo.gl/maps/ABxo8tzCBPPFV5Ee9"
             />
-            <div></div>
-            <div></div>
+            <div>Tremezzo, CO</div>
             <div>Ore 15:30</div>
 
             <div className="info_ImageLargeContainer">

@@ -9,7 +9,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /* background: var(--backgroundColor); */
   background-image: url("http://localhost:3000/sfondogeg.png");
   background-size: cover;
 }
