@@ -11,6 +11,7 @@ function App() {
   const goBack = () => setTimeout(() => {
     setCurrentView('menu')
   }, 200);
+  console.log("THE URL", process.env.GRAPHQL_URL)
   return (
     <div>
       {currentView === 'menu' && <Menu setView={setCurrentView}/>}
