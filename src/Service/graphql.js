@@ -3,15 +3,15 @@ async function fetchGraphQL(operationsDoc, operationName, variables) {
         process.env.REACT_APP_GRAPHQL_URL,
         {
             method: "POST",
-            body: JSON.stringify({
-            query: operationsDoc,
-            variables: variables,
-            operationName: operationName,
             headers: {
                 'Content-Type': 'application/json',
                 'x-hasura-admin-secret': process.env.REACT_APP_GRAPHQL_TOKEN
-              },
-            })
+            },
+            body: JSON.stringify({
+                query: operationsDoc,
+                variables: variables,
+                operationName: operationName
+              })
         }
     );
   
@@ -20,16 +20,23 @@ async function fetchGraphQL(operationsDoc, operationName, variables) {
 
   
 export function executeInsert_users(usersArray) {
-    return fetchGraphQL(
-        `mutation insert_users {
-          insert_users(objects: ${usersArray}) {
-            returning {
-              id
-            }
-          }
+
+  const json = JSON.stringify(usersArray);  // {"name":"John Smith"}
+  const unquoted = json.replace(/"([^"]+)":/g, '$1:');
+
+  const mutationString = `
+    mutation insert_users {
+      insert_users(objects: ${unquoted}) {
+        returning {
+          id
         }
-      `,
-      "insert_users",
-      {}
-    );
+      }
+    }
+  `
+
+  return fetchGraphQL(
+    mutationString,
+    "insert_users",
+    {}
+  );
 }

@@ -34,10 +34,9 @@ const Ricevimento = () => {
             <div>Nome:</div>
             <input></input>
 
-            <button onClick={() => startExecuteInsert_users([{
-                name: "Giancarlo Arancioni",
-                confirmation: true,
-            }])}>GENERATE USER</button>
+            <button onClick={() => startExecuteInsert_users([
+                {name: "Giancarlo Malgioglio", confirmation: true}
+            ])}>GENERATE USER</button>
 
         </div>
         </div>
