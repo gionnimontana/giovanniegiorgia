@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
 import Badge from '../UI_kit/Badge/Badge'
+import { executeInsert_users } from '../Service/graphql'
 import './Ricevimento.css'
 
 const Ricevimento = () => {
     const [ciSaro, setCiSaro] = useState(undefined)
+
+    async function startExecuteInsert_users(usersArray) {
+        const { errors, data } = await executeInsert_users(usersArray);
+        if (errors) {
+          console.error(errors);
+        }
+        console.log(data);
+    }
 
     return (
         <div>
@@ -22,14 +31,14 @@ const Ricevimento = () => {
                 </div>
             )}
 
-            <div>Commenti:</div>
+            <div>Nome:</div>
             <input></input>
 
-            <div className="info_marginTop info_italic">CERIMONIA</div>
-            <div className="info_marginTop">Chiesa San Lorenzo</div>
-            <div className="info_marginTop info_italic">CONSIGLI UTILI</div>  
-            <div className="info_marginTop info_nocenter"><strong>•</strong> I parcheggi sono limitati, vi chiediamo di utilizzare il minor numero di macchine possibile</div> 
-            <div className="info_nocenter"><strong>•</strong> Tacchi bassi e/o scarpe basse di ricambio per le donne: pavimentazione prevalente di ghiaia e ciottoli</div>   
+            <button onClick={() => startExecuteInsert_users([{
+                name: "Giancarlo Arancioni",
+                confirmation: true,
+            }])}>GENERATE USER</button>
+
         </div>
         </div>
     )
