@@ -6,19 +6,3 @@
     max-width: 20rem;
     margin: auto;
 }
-
-.ricevimento_ciSaroButton {
-    width: 8rem;
-    background: var(--colorShadeA);
-    color: white;
-    border-radius: 1rem;
-    cursor: pointer;
-}
-
-.ricevimento_ciSaroButton:hover {
-    background-color: var(--colorShadeB);
-}
-
-.ricevimento_ciSaroButton:active {
-    background-color: var(--colorShadeC);
-}

@@ -2,6 +2,9 @@
     font-style: italic;
     font-size: 1.3rem;
     margin-bottom: 1rem;
+    font-family: 'Raleway';
+    color: var(--colorShadeA);
+    font-weight: 600;
 }
 
 .info_container {

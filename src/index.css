@@ -107,6 +107,22 @@ button.cake-button:active::before {
   border-bottom:initial;
 }
 
+.basic_plain_button {
+  width: 8rem;
+  background: var(--colorShadeA);
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.basic_plain_button:hover {
+  background-color: var(--colorShadeB);
+}
+
+.basic_plain_button:active {
+  background-color: var(--colorShadeC);
+}
+
 @media only screen and (max-width: 600px) {
   .standardBox {
     padding: 1em 0.8em;
