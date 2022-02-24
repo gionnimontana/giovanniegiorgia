@@ -5,6 +5,7 @@ import ListaNozze from './ListaNozze/ListaNozze';
 import Menu from './Menu/Menu';
 import Ricevimento from './Ricevimento/Ricevimento';
 import Page from './UI_kit/Page/Page';
+import background from "./sfondogeg.png";
 
 function App() {
   const [currentView, setCurrentView] = useState('menu')
@@ -13,24 +14,25 @@ function App() {
   }, 200);
 
   return (
-    <div>
-      {currentView === 'menu' && <Menu setView={setCurrentView}/>}
-      {currentView === 'info' && (
-        <Page label="Info" goBack={goBack} >
-          <Info/>
-        </Page>
-      )}
-      {currentView === 'ricevimento' && (
-        <Page label="Ricevimento" goBack={goBack} >
-          <Ricevimento/>
-        </Page>
-      )}
-      {currentView === 'listaNozze' && (
-        <Page label="Lista nozze" goBack={goBack} >
-          <ListaNozze/>
-        </Page>
-      )}
-
+    <div className="app_main" style={{ backgroundImage: `url(${background})`}}>
+      <div>
+        {currentView === 'menu' && <Menu setView={setCurrentView}/>}
+        {currentView === 'info' && (
+          <Page label="Info" goBack={goBack} >
+            <Info/>
+          </Page>
+        )}
+        {currentView === 'ricevimento' && (
+          <Page label="Ricevimento" goBack={goBack} >
+            <Ricevimento/>
+          </Page>
+        )}
+        {currentView === 'listaNozze' && (
+          <Page label="Lista nozze" goBack={goBack} >
+            <ListaNozze/>
+          </Page>
+        )}
+      </div>
     </div>
   );
 }

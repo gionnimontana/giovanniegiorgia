@@ -9,8 +9,15 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("http://localhost:3000/sfondogeg.png");
   background-size: cover;
+}
+
+.app_main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 :root {
