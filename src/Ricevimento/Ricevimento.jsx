@@ -5,6 +5,7 @@ import './Ricevimento.css'
 
 const Ricevimento = () => {
     const [ciSaro, setCiSaro] = useState(undefined)
+    const [saremoIn, setSaremoIn] = useState(undefined)
 
     async function startExecuteInsert_users(usersArray) {
         const { errors, data } = await executeInsert_users(usersArray);

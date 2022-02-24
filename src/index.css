@@ -27,6 +27,7 @@ body {
   --colorShadeC: rgb(150, 232, 195);
   --colorShadeD: rgb(187, 232, 211);
   --colorShadeE: rgb(236, 252, 245);
+  --errorColor: rgb(196, 72, 246);
 }
 
 .standardBox {

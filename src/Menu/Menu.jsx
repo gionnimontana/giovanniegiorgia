@@ -7,10 +7,7 @@ const Menu = (p) => {
     }, 200);
 
     return (
-        <div>
-            {/* <div id="coverContainer">
-                <img src="http://localhost:3000/g&gColor.jpg" id="coverImg"/>
-            </div> */}
+        <div className="standardBox">
             <div>
                 <div id="ggLogo">
                     <div>Giovanni e Giorgia</div>
