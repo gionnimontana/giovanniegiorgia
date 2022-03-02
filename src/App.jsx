@@ -7,7 +7,7 @@ import Login from './Login/Login';
 import Loading from './Loading/Loading';
 import Ricevimento from './Ricevimento/Ricevimento';
 import Page from './UI_kit/Page/Page';
-import background from "./muschio.jpeg";
+import background from "./gio_n_gio_background.jpg";
 
 function App() {
   const [currentView, setCurrentView] = useState('loading')

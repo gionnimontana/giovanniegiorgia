@@ -7,7 +7,7 @@ const Menu = (p) => {
     }, 200);
 
     return (
-        <div className="standardBox">
+        <div >
             <div>
                 <div id="ggLogo">
                     <div>Giovanni e Giorgia</div>
