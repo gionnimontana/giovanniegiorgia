@@ -1,12 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Badge from '../UI_kit/Badge/Badge'
 import { executeInsert_users } from '../Service/graphql'
 import './Ricevimento.css'
 import NumberButtons from '../UI_kit/NumberButtons/NumberButtons'
+import PeopleCard from './PeopleCards'
 
 const Ricevimento = () => {
     const [ciSaro, setCiSaro] = useState(undefined)
     const [saremoIn, setSaremoIn] = useState(undefined)
+    const [allergie, setAllergie] = useState(undefined)
+
+    useEffect(() => {
+        console.log('ciSaro', ciSaro)
+        console.log('saremo in', saremoIn)
+        console.log('allergie', allergie)
+    })
 
     async function startExecuteInsert_users(usersArray) {
         const { errors, data } = await executeInsert_users(usersArray);
@@ -18,6 +26,17 @@ const Ricevimento = () => {
 
     const nameObj = localStorage.getItem('user')
     const name = JSON.parse(nameObj).name
+
+    const maxPeopleNumber = 8
+    const allergieOptions = [
+        'Mangio tutto',
+        'Menu` bambini',
+        'Infante (0-2 anni)',
+        'Vegetariano',
+        'Vegano',
+        'Celiaco',
+        'Non mangio'
+    ]
 
     return (
         <div>
@@ -37,13 +56,16 @@ const Ricevimento = () => {
                     </div>
                     <div>
                         <NumberButtons 
-                            max={8} 
+                            labels={Array.from(Array(maxPeopleNumber).keys()).map(el => el + 1)} 
                             onSelect={(e) => setSaremoIn(e)}
                             query="In quanti sarete?"
                             label="Saremo in"
+                            selected={saremoIn}
                         />
                     </div>
-                    {/* {saremoIn && <div>Saremo In Fields</div>} */}
+                    {saremoIn && <div>
+                        <PeopleCard allergie={allergieOptions}/>
+                    </div>}
                 </div>
             )}
 

@@ -2,22 +2,19 @@ import { useState } from 'react'
 import Badge from '../Badge/Badge'
 import './NumberButtons.css'
 
-const NumberButtons = (p) => {
-  const [selected, setSelected] = useState(undefined)
-  const buttonArray = Array.from(Array(p.max).keys()).map(el => el + 1)
+const NumberButtons = ({onSelect, selected, label, labels}) => {
 
   const onClick = (el) => {
-    setSelected(el)
-    p.onSelect(selected)
+    onSelect(el)
   }
 
   return (
     <div className="numberButtons_container">
-      {p.label !== undefined && !selected && (
-        <div className="numberButtons_label">{p.label}</div>
+      {label !== undefined && !selected && (
+        <div className="numberButtons_label">{label}</div>
       )}
       <div className="numberButtons_buttoncontainer">
-        {selected === undefined && buttonArray.map(el =>(
+        {selected === undefined && labels.map(el =>(
           <div 
             key={el}
             className="basic_plain_button numberButtons_button" 
@@ -27,7 +24,7 @@ const NumberButtons = (p) => {
           </div>
         ))}
         {selected && (
-            <Badge text={`${p.label} ${selected}`} onClick={() => onClick(undefined)}/>
+            <Badge text={`${label} ${selected}`} onClick={() => onClick(undefined)}/>
           )}
       </div>
     </div>
