@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import Info from './Info/Info';
 import ListaNozze from './ListaNozze/ListaNozze';
 import Menu from './Menu/Menu';
@@ -7,7 +6,6 @@ import Login from './Login/Login';
 import Loading from './Loading/Loading';
 import Ricevimento from './Ricevimento/Ricevimento';
 import Page from './UI_kit/Page/Page';
-import background from "./gio_n_gio_background.jpg";
 
 function App() {
   const [currentView, setCurrentView] = useState('loading')
@@ -16,7 +14,7 @@ function App() {
   }, 200);
 
   return (
-    <div className="app_main" style={{ backgroundImage: `url(${background})`}}>
+    <div className="app_main">
       <div>
         {currentView === 'loading' && <Loading setView={setCurrentView}/>}
         {currentView === 'login' && <Login setView={setCurrentView}/>}

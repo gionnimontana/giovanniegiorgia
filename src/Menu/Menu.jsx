@@ -1,5 +1,6 @@
 import React from "react";
 import './Menu.style.css';
+import background from "../g&g_cover.jpeg";
 
 const Menu = (p) => {
     const sw = (view) => () => setTimeout(() => {
@@ -8,7 +9,10 @@ const Menu = (p) => {
 
     return (
         <div >
-            <div>
+            <div className="standardBox" id="menu_main_container">
+                <div className="ggCoverContainer">
+                    <img src={background} className="ggCover"/>
+                </div>
                 <div id="ggLogo">
                     <div>Giovanni e Giorgia</div>
                     <div>2 Luglio 2022</div>
