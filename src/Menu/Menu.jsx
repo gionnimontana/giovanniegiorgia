@@ -13,29 +13,31 @@ const Menu = (p) => {
                 <div className="ggCoverContainer">
                     <img src={background} className="ggCover"/>
                 </div>
-                <div id="ggLogo">
-                    <div>Giovanni e Giorgia</div>
-                    <div>2 Luglio 2022</div>
-                </div>
-                <div id="columnLayout">
-                    <button 
-                        className="cake-button menuButton" 
-                        onClick={sw('info')}
-                    >
-                        Info
-                    </button>
-                    <button 
-                        className="cake-button menuButton" 
-                        onClick={sw('ricevimento')}
-                    >
-                        Ricevimento
-                    </button>
-                    <button 
-                        className="cake-button menuButton" 
-                        onClick={sw('listaNozze')}
-                    >
-                        Lista nozze
-                    </button>
+                <div className="menu_body_container">
+                    <div id="ggLogo">
+                        <div>Giovanni e Giorgia</div>
+                        <div>2 Luglio 2022</div>
+                    </div>
+                    <div id="columnLayout">
+                        <button 
+                            className="cake-button menuButton" 
+                            onClick={sw('info')}
+                        >
+                            Info
+                        </button>
+                        <button 
+                            className="cake-button menuButton" 
+                            onClick={sw('ricevimento')}
+                        >
+                            Ricevimento
+                        </button>
+                        <button 
+                            className="cake-button menuButton" 
+                            onClick={sw('listaNozze')}
+                        >
+                            Lista nozze
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

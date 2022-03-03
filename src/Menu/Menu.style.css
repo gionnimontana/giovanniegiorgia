@@ -13,9 +13,14 @@
   #menu_main_container {
     min-height: 94vh;
     max-width: 500px;
+    width: 90vw;
   }
 
   .ggCover{
       width: 100%;
       border-radius: 1rem;
+  }
+
+  .menu_body_container {
+    padding: 1rem 0.5rem;
   }
