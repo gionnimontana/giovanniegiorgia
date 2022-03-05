@@ -115,6 +115,8 @@ button.cake-button:active::before {
   color: white;
   border-radius: 1rem;
   cursor: pointer;
+  line-height: 1.5;
+  padding: 0.4rem;
 }
 
 .basic_plain_button:hover {

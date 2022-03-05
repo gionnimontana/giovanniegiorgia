@@ -3,17 +3,27 @@ import Badge from '../UI_kit/Badge/Badge'
 import { executeInsert_users } from '../Service/graphql'
 import './Ricevimento.css'
 import NumberButtons from '../UI_kit/NumberButtons/NumberButtons'
-import PeopleCard from './PeopleCards'
+import PeopleCards from '../UI_kit/PeopleCards/PeopleCards'
+
+const maxPeopleNumber = 8
+const allergieOptions = [
+    'Mangio tutto',
+    'Menu` bambini',
+    'Infante (0-2 anni)',
+    'Vegetariano',
+    'Vegano',
+    'Celiaco',
+    'Non mangio'
+]
 
 const Ricevimento = () => {
     const [ciSaro, setCiSaro] = useState(undefined)
     const [saremoIn, setSaremoIn] = useState(undefined)
-    const [allergie, setAllergie] = useState(undefined)
+    const [confirmed, setConfirmed] = useState([])
 
     useEffect(() => {
         console.log('ciSaro', ciSaro)
         console.log('saremo in', saremoIn)
-        console.log('allergie', allergie)
     })
 
     async function startExecuteInsert_users(usersArray) {
@@ -27,17 +37,6 @@ const Ricevimento = () => {
     const nameObj = localStorage.getItem('user')
     const name = JSON.parse(nameObj).name
 
-    const maxPeopleNumber = 8
-    const allergieOptions = [
-        'Mangio tutto',
-        'Menu` bambini',
-        'Infante (0-2 anni)',
-        'Vegetariano',
-        'Vegano',
-        'Celiaco',
-        'Non mangio'
-    ]
-
     return (
         <div>
         <div className="info_container">
@@ -46,14 +45,10 @@ const Ricevimento = () => {
                 <div className="basic_plain_button" onClick={() => setCiSaro(true)}>Ci saro'</div>
                 <div className="basic_plain_button" onClick={() => setCiSaro(false)}>Non ci saro'</div>
             </div>}
-            {ciSaro === false && <div style={{marginTop: '2rem'}}>
-                <Badge text="Non ci saro'" onClick={() => setCiSaro(undefined)}/>
-            </div>}         
+            {ciSaro === false && <Badge text="Non ci saro'" onClick={() => setCiSaro(undefined)}/>}         
             {ciSaro && (
                 <div>
-                    <div style={{marginTop: '2rem'}}>
-                        <Badge text="Ci saro'" onClick={() => setCiSaro(undefined)}/>
-                    </div>
+                    <Badge text="Ci saro'" onClick={() => setCiSaro(undefined)}/>
                     <div>
                         <NumberButtons 
                             labels={Array.from(Array(maxPeopleNumber).keys()).map(el => el + 1)} 
@@ -64,7 +59,12 @@ const Ricevimento = () => {
                         />
                     </div>
                     {saremoIn && <div>
-                        <PeopleCard allergie={allergieOptions}/>
+                        <PeopleCards 
+                            allergie={allergieOptions}
+                            confirmed={confirmed}
+                            setConfirmed={setConfirmed}
+                            saremoIn={saremoIn}
+                        />
                     </div>}
                 </div>
             )}
@@ -73,6 +73,10 @@ const Ricevimento = () => {
                 {name: "Giancarlo Malgioglio", confirmation: true}
             ])}>GENERATE USER</button> */}
 
+
+            {saremoIn === confirmed.length && (
+                <button className="cake-button menuButton">Conferma Partecipazione</button>
+            )}
         </div>
         </div>
     )
