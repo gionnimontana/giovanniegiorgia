@@ -24,7 +24,13 @@ const Ricevimento = () => {
     useEffect(() => {
         console.log('ciSaro', ciSaro)
         console.log('saremo in', saremoIn)
+        console.log('confirmed', confirmed)
     })
+
+    const handleSaremo = (e) => {
+        setSaremoIn(e)
+        setConfirmed([])
+    }
 
     async function startExecuteInsert_users(usersArray) {
         const { errors, data } = await executeInsert_users(usersArray);
@@ -52,8 +58,7 @@ const Ricevimento = () => {
                     <div>
                         <NumberButtons 
                             labels={Array.from(Array(maxPeopleNumber).keys()).map(el => el + 1)} 
-                            onSelect={(e) => setSaremoIn(e)}
-                            query="In quanti sarete?"
+                            onSelect={handleSaremo}
                             label="Saremo in"
                             selected={saremoIn}
                         />
@@ -75,7 +80,12 @@ const Ricevimento = () => {
 
 
             {saremoIn === confirmed.length && (
-                <button className="cake-button menuButton">Conferma Partecipazione</button>
+                <button 
+                    className="cake-button menuButton"
+                    style={{marginTop: '3rem'}}
+                >
+                    Conferma Partecipazione
+                </button>
             )}
         </div>
         </div>

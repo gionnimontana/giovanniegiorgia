@@ -2,3 +2,8 @@
     margin: auto;
     margin-top: 1.5rem;
 }
+
+.peoplecard_header {
+    color: var(--colorShadeA);
+    font-size: 1.2rem;
+}

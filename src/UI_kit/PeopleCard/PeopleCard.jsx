@@ -7,20 +7,24 @@ import './PeopleCard.css'
 const PeopleCard = (p) => {
     const [name, setName] = useState(undefined)
     const [selected, setSelected] = useState(undefined)
+    const [rState, setRState] = useState(0)
 
     const onConfirm = () => {
         p.onConfirm({ name, selected })
+        setName(undefined)
+        setRState(s => s += 1)
     }
 
     return (
         <div className="standardBox">
-            <Input label="Nome e cognome:" onChange={(e) => setName(e)}/>
+            <div className="peoplecard_header">Partecipante {p.targetNumber}</div>
+            <Input label="Nome e cognome:" onChange={(e) => setName(e)} resetState={rState}/>
             <NumberButtons 
                 labels={p.allergie} 
                 onSelect={(e) => setSelected(e)}
-                query="Allergie"
                 label="Allergie:"
                 selected={selected}
+                allowOther={true}
             />
             {name && selected && (
                 <div 

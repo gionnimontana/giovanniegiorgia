@@ -31,6 +31,7 @@ const PeopleCards = (p) => {
                 <PeopleCard
                     allergie={p.allergie} 
                     onConfirm={onConfirm}
+                    targetNumber={p.confirmed.length + 1}
                 />
             )}
         </div>
