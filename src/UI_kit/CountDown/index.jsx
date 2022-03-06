@@ -34,7 +34,7 @@ const CountDown = () => {
                 <div>{mLeft}</div>
                 <div className="counter_numberLabel">minuti</div>
             </div>
-            <div className="counter_label">alla cerimonia</div>
+            {/* <div className="counter_label">alla cerimonia</div> */}
         </div>
     )
 }

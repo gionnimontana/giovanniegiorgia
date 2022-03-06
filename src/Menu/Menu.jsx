@@ -19,6 +19,7 @@ const Menu = (p) => {
                         <div>Giovanni e Giorgia</div>
                         <div>2 Luglio 2022</div>
                     </div>
+                    <CountDown />
                     <div id="columnLayout">
                         <button 
                             className="cake-button menuButton" 
@@ -38,7 +39,6 @@ const Menu = (p) => {
                         >
                             Lista nozze
                         </button>
-                        <CountDown />
                     </div>
                 </div>
             </div>
