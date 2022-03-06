@@ -21,12 +21,6 @@ const Ricevimento = () => {
     const [saremoIn, setSaremoIn] = useState(undefined)
     const [confirmed, setConfirmed] = useState([])
 
-    useEffect(() => {
-        console.log('ciSaro', ciSaro)
-        console.log('saremo in', saremoIn)
-        console.log('confirmed', confirmed)
-    })
-
     const handleSaremo = (e) => {
         setSaremoIn(e)
         setConfirmed([])
@@ -35,9 +29,20 @@ const Ricevimento = () => {
     async function startExecuteInsert_users(usersArray) {
         const { errors, data } = await executeInsert_users(usersArray);
         if (errors) {
-          console.error(errors);
+          alert('Ops, qualcosa è andato storto, ritenta, sarai più fortunato');
+        } else {
+
         }
-        console.log(data);
+    }
+
+    const onConfirm = () => {
+        const clusterId = ""
+        const userPromises = confirmed.map(el => {
+            const payload = {name: "Giancarlo Malgioglio", confirmation: true, menu_options: 'x', clusterId: 'x'}
+        })
+
+        const payl = {name: "Giancarlo Malgioglio", confirmation: true, menu_options: 'x', clusterId: 'x'}
+        startExecuteInsert_users(payl)
     }
 
     const nameObj = localStorage.getItem('user')
@@ -54,7 +59,12 @@ const Ricevimento = () => {
             {ciSaro === false && <Badge text="Non ci saro'" onClick={() => setCiSaro(undefined)}/>}         
             {ciSaro && (
                 <div>
-                    <Badge text="Ci saro'" onClick={() => setCiSaro(undefined)}/>
+                    <Badge text="Ci saro'" 
+                        onClick={() => {
+                            setCiSaro(undefined)
+                            setConfirmed([])
+                        }}
+                    />
                     <div>
                         <NumberButtons 
                             labels={Array.from(Array(maxPeopleNumber).keys()).map(el => el + 1)} 
@@ -74,17 +84,13 @@ const Ricevimento = () => {
                 </div>
             )}
 
-            {/* <button onClick={() => startExecuteInsert_users([
-                {name: "Giancarlo Malgioglio", confirmation: true}
-            ])}>GENERATE USER</button> */}
-
-
-            {saremoIn === confirmed.length && (
+            {(ciSaro === false  || saremoIn === confirmed.length) && (
                 <button 
                     className="cake-button menuButton"
-                    style={{marginTop: '3rem'}}
+                    style={{marginTop: '3rem', width: '12rem'}}
+                    onClick={onConfirm}
                 >
-                    Conferma Partecipazione
+                    Conferma
                 </button>
             )}
         </div>

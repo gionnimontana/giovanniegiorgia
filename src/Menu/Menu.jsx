@@ -1,6 +1,7 @@
 import React from "react";
 import './Menu.style.css';
 import background from "../g&g_cover.jpeg";
+import CountDown from '../UI_kit/CountDown'
 
 const Menu = (p) => {
     const sw = (view) => () => setTimeout(() => {
@@ -37,6 +38,7 @@ const Menu = (p) => {
                         >
                             Lista nozze
                         </button>
+                        <CountDown />
                     </div>
                 </div>
             </div>
