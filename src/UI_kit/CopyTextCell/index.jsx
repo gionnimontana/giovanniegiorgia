@@ -1,9 +1,10 @@
 import React, { useEffect, useState} from 'react';
+import { genRandomStr } from '../../utils'
 import './CopyTextCell.css';
 
 const CopyTextCell = ({text}) => {
   const [buttonIcon, setButtonIcon] = useState('copy')
-  const textId = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 8);
+  const textId = genRandomStr()
   const containerId = `c-${textId}`
 
   const copyFunction = () => {

@@ -40,3 +40,23 @@ export function executeInsert_users(usersArray) {
     {}
   );
 }
+
+export function executeDeleteByClusterId(clusterId) {
+
+  const mutationString = `
+    mutation delete_by_clusterId_users {
+      delete_users(
+        where: {clusterId: {_eq: "${clusterId}"}}
+      ) {
+        affected_rows
+      }
+    }
+  `
+
+  return fetchGraphQL(
+    mutationString,
+    "delete_by_clusterId_users",
+    {}
+  );
+}
+

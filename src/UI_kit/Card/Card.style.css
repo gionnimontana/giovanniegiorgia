@@ -1,12 +1,13 @@
 .cardImage {
     height: 100%;
+    cursor: pointer;
 }
 
 .cardImageContainer {
     border: 2px solid var(--colorShadeA);
     border-radius: 1em;
     order: 0;
-    width: 10rem;
+    width: 14rem;
     height: 8rem; 
     overflow: hidden;
     display: flex;
