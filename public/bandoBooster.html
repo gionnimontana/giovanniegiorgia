@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="https://iy53av7vbf3mqqwpgiurbpkplbnntkmkow5polbjlk6lmbimzaca.arweave.net/RjuwV_UJdshCzzIpEL1PWFrZqYp1uvcsKVq8tgUMyAQ" />
+    <title>BandoBooster</title>
+    <style id="jsbin-css">
+      :root {
+        --body-color: black;
+        --eye-color: rgb(150, 232, 195);
+        --mouth-color: rgb(150, 232, 195);
+        --back-up-color: rgb(236, 252, 245);
+        --back-down-color: rgb(106, 163, 137);
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+      #bandoBoosterBox{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      #eyeContainer {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-bottom: 100px;
+      } 
+      #faceContainer {
+        display: flex;
+        justify-content: center;
+      }
+      #face {
+        background: var(--body-color);
+        padding-top: 80px;
+        padding-bottom: 60px;
+        border-radius: 200px;
+        width: 300px;
+      }
+      #mouth {
+        background: var(--mouth-color);
+      }
+      #armContainer {
+        display: flex;
+        justify-content: center;
+      }
+      #leftArm {
+        left: calc(50% - 190px);
+      }
+      #rightArm {
+        left: calc(50% + 40px);
+      }
+      #audioPlayer {
+        position: fixed;
+        bottom: 0;
+        left: calc(50% - 150px);
+        z-index: 10;
+        margin-bottom: 10px;
+      }
+      .arms {
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 40px;
+        width: 150px;
+        background: var(--body-color);
+        border-radius: 50px
+      }
+      .eye {
+        background: var(--eye-color);
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50px
+      }
+      .pupil{
+        height: 30px;
+        width: 30px;
+        background: var(--body-color);;
+        margin-top: 33px;
+        border-radius: 50px;
+      }
+      .mouthContainer{
+        display: flex;
+        justify-content: center
+      }
+      .closeMouth {
+        width: 200px;
+        height: 50px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center
+      }
+      .closeMouth > div {
+        width: 150px;
+        height: 10px;
+        background: var(--body-color);;
+        border-radius: 50px;
+        margin-top: 20px
+      }
+      .openMouth {
+        margin-top: -25px;
+        width: 150px;
+        height: 100px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center
+      }
+      .openMouth > div {
+        width: 110px;
+        height: 60px;
+        background: var(--body-color);;
+        border-radius: 30px;
+        margin-top: 20px
+      }
+      .leftup {
+        transform: rotate(25deg);
+      }
+      .rightUp{
+        transform: rotate(-25deg);
+      }
+      .leftdown{
+        transform: rotate(-25deg);
+      }
+      .rightdown{
+        transform: rotate(25deg);
+      }
+      .backGroundStyle0 {
+        background-image: linear-gradient(var(--back-up-color), var( --back-down-color));
+      }
+      .backGroundStyle1 {
+        background-image: linear-gradient(to right, var(--back-up-color), var( --back-down-color));
+      }
+      .backGroundStyle2 {
+        background-image: linear-gradient(to left, var(--back-up-color), var( --back-down-color));
+      }
+      .backGroundStyle3 {
+        background-image: linear-gradient(to bottom, var(--back-up-color), var( --back-down-color));
+      }
+    </style>
+    <script id="jsbin-javascript">
+      let songTime = 0
+      let lastIndex = 5
+      let backGroundIndex = 3
+      let isMouthOpen = false
+      let danceInterval = undefined
+      let speakInterval = undefined
+      let backgroundInterval = undefined
+      let songTimeInterval = undefined
+
+      function toggleMouth() {
+        if (isMouthOpen) closeMouth()
+        else openMouth()
+      }
+      function moveRandomArm() {
+        const armActions = [riseLeft, riseRight, lowerLeft, lowerRight, balanceRight, balanceLeft]
+        const randomIndex = Math.floor(Math.random() * (5 - 0 + 1) + 0)
+        armActions[randomIndex]()
+        lastIndex = randomIndex
+      }
+      function randomBackground() {
+        const actions = [lightUp, lightDown, lightUp, lightDown]
+        const randomIndex = Math.floor(Math.random() * (3 - 0 + 1) + 0)
+        actions[randomIndex]()
+        backGroundIndex = randomIndex
+      }
+      function dance() {
+        danceInterval = setInterval(() => {
+          moveRandomArm()
+        }, 50)
+      }
+      function speak() {
+        speakInterval = setInterval(() => {
+          if ((songTime > 12.80 && songTime < 28) ||
+              (songTime > 29.8 && songTime < 38) ||
+              (songTime > 61 && songTime < 69.5) ||
+              (songTime > 87 && songTime < 90) ||
+              (songTime > 91 && songTime < 95) ||
+              (songTime > 127 && songTime < 135)
+              ) {
+                toggleMouth()
+          } else {
+            closeMouth()
+          }
+        }, 120)
+      }
+      function changeBackground() {
+        backgroundInterval = setInterval(() => {
+          randomBackground()
+        }, 500)
+      }
+      function trackSongTime() {
+        const audio = document.getElementById("audioPlayer");
+        songTimeInterval = setInterval(() => {
+          songTime = audio.currentTime
+        }, 10)
+      }
+      function stopDance() {
+        clearInterval(danceInterval)
+      }
+      function stopSpeak() {
+        clearInterval(speakInterval)
+      }
+      function stopShiftBack() {
+        clearInterval(backgroundInterval)
+      }
+      function stopTrackTime() {
+        clearInterval(songTimeInterval)
+      }
+      function handlePlay(){
+        trackSongTime()
+        speak()
+        dance()
+        changeBackground()
+      }
+      function handlePause() {
+        stopDance()
+        stopSpeak()
+        stopTrackTime()
+        stopShiftBack()
+        restoreMovements()
+      }
+      function restoreMovements() {
+        closeMouth()
+        balanceLeft()
+        balanceRight()
+      }
+      function openMouth() {
+        if (isMouthOpen) return
+        document.getElementById('mouth').classList.remove("closeMouth");
+        document.getElementById('mouth').classList.add("openMouth");
+        document.getElementById('face').style.paddingBottom = '40px'
+        isMouthOpen = true
+      }
+      function closeMouth() {
+        if (!isMouthOpen) return
+        document.getElementById('mouth').classList.remove("openMouth");
+        document.getElementById('mouth').classList.add("closeMouth");
+        document.getElementById('face').style.paddingBottom = '60px'
+        isMouthOpen = false
+      }
+      function riseLeft() {
+        document.getElementById('leftArm').classList.remove("leftdown");
+        document.getElementById('leftArm').classList.add("leftup");
+      }
+      function riseRight() {
+        document.getElementById('rightArm').classList.remove("rightdown");
+        document.getElementById('rightArm').classList.add("rightup");
+      }
+      function lowerLeft() {
+        document.getElementById('leftArm').classList.remove("leftup");
+        document.getElementById('leftArm').classList.add("leftdown");
+      }
+      function lowerRight() {
+        document.getElementById('rightArm').classList.remove("rightup");
+        document.getElementById('rightArm').classList.add("rightdown");
+      }
+      function balanceRight() {
+        document.getElementById('rightArm').classList.remove("rightup");
+        document.getElementById('rightArm').classList.remove("rightdown");
+      }
+      function balanceLeft() {
+        document.getElementById('leftArm').classList.remove("leftup");
+        document.getElementById('leftArm').classList.remove("leftdown");
+      }
+      function lightUp() {
+        document.getElementsByTagName('body')[0].removeAttribute("class");
+        document.getElementsByTagName('body')[0].classList.add("backGroundStyle0");
+      }
+      function lightDown() {
+        document.getElementsByTagName('body')[0].removeAttribute("class");
+        document.getElementsByTagName('body')[0].classList.add("backGroundStyle1");
+      }
+      function lightLeft() {
+        document.getElementsByTagName('body')[0].removeAttribute("class");
+        document.getElementsByTagName('body')[0].classList.add("backGroundStyle2");
+      }
+      function lightRight() {
+        document.getElementsByTagName('body')[0].removeAttribute("class");
+        document.getElementsByTagName('body')[0].classList.add("backGroundStyle3");
+      }
+    </script>
+  </head>
+  <body class="backGroundStyle0">
+    <audio 
+      id="audioPlayer" 
+      controls 
+      autoplay 
+      loop
+      onplay="handlePlay()"
+      onpause="handlePause()"
+      src="https://nsobm2vyz6op6fmexygddywwilqoregtfkpi3he7qyfjiypndjyq.arweave.net/bJwWarjPnP8VhL4MMeLWQuDokNMqno2cn4YKlGHtGnE"
+    >
+    </audio>
+    <div id="bandoBoosterBox">
+      <div id="faceContainer">
+        <div id="face">
+          <div id="eyeContainer">
+          <div class="eye"><div class="pupil"></div></div>
+          <div class="eye"><div class="pupil"></div></div>
+        </div>
+        <div class="mouthContainer">
+          <div id="mouth" class="closeMouth"><div></div></div>
+        </div>
+        </div>
+      </div>
+      <div id="armContainer">
+        <div class="arms" id="leftArm"></div>
+        <div class="arms" id="rightArm"></div>
+      </div>
+    </div>
+  </body>
+</html>

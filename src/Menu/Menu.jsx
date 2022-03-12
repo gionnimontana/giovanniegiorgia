@@ -8,6 +8,11 @@ const Menu = (p) => {
         p.setView(view)
     }, 200);
 
+    const logout = () => {
+        localStorage.removeItem('user')
+        window.location.reload()
+    }
+
     return (
         <div >
             <div className="standardBox" id="menu_main_container">
@@ -39,6 +44,12 @@ const Menu = (p) => {
                         >
                             Lista nozze
                         </button>
+                    </div>
+                    <div 
+                        className="menu_logout"
+                        onClick={logout}
+                    >
+                        Logout
                     </div>
                 </div>
             </div>

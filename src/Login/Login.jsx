@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Input from '../UI_kit/Input/Input';
+import { easterEgg } from '../utils'
 import './Login.style.css';
-import Input from '../UI_kit/Input/Input'
 
 const Login = (p) => {
     const [name, setName] = useState(undefined)
@@ -11,6 +12,8 @@ const Login = (p) => {
     const [passwordError, setPasswordError] = useState(undefined)
 
     const sw = () => {
+        if (easterEgg(password)) return
+
         setNameError(undefined)
         setSurnameError(undefined)
         setPasswordError(undefined)

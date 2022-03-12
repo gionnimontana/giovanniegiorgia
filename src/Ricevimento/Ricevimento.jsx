@@ -3,7 +3,7 @@ import Badge from '../UI_kit/Badge/Badge'
 import { executeInsert_users, executeDeleteByClusterId } from '../Service/graphql'
 import NumberButtons from '../UI_kit/NumberButtons/NumberButtons'
 import PeopleCards from '../UI_kit/PeopleCards/PeopleCards'
-import { genRandomStr } from '../utils'
+import { genRandomStr, refreshWarning } from '../utils'
 import './Ricevimento.css'
 
 const maxPeopleNumber = 8
@@ -29,6 +29,7 @@ const Ricevimento = () => {
     const surname = JSON.parse(nameObj).surname
 
     useEffect(() => {
+        refreshWarning()
         const a = localStorage.getItem('ciSaro')
         const b = localStorage.getItem('saremoIn')
         const c = localStorage.getItem('confirmed')
@@ -50,7 +51,7 @@ const Ricevimento = () => {
 
     async function startExecuteInsert_users(usersArray, clusterId) {
         if (cID) await executeDeleteByClusterId(cID)
-        const { errors, data } = await executeInsert_users(usersArray);
+        const { errors } = await executeInsert_users(usersArray);
         if (errors) {
           alert('Ops, qualcosa è andato storto, ritenta, sarai più fortunato');
         } else {

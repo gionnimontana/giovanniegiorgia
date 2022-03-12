@@ -24,3 +24,11 @@
   .menu_body_container {
     padding: 1rem;
   }
+
+  .menu_logout {
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+    color: var(--colorShadeA);
+    margin-top: 1rem;
+  }

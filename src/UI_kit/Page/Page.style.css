@@ -1,17 +1,17 @@
-#pageContainer {
+#page_container {
     height: 98vh;
     width: 98vw;
     max-width: 55rem;
 }
 
-#pageHeader {
+#page_header {
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-#pageLabel {
+#page_label {
     font-size: 1.5rem;
     color: var(--colorShadeA);
     font-weight: 700;
@@ -21,14 +21,19 @@
     margin-right: 2rem;
 }
 
-#pageContent {
+#page_content {
     height: 80vh;
     overflow: auto;
 }
 
-#backButton {
+#page_backbutton {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 0rem 0.8rem;
     margin-top: -0.4rem;
+}
+
+#page_labelnavigation {
+    cursor: pointer;
+    font-size: 1.2rem;
 }

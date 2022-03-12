@@ -13,7 +13,7 @@ const CountDown = () => {
 
     useEffect(() => {
         upDateCounter()
-        const timer = setInterval(() => upDateCounter(), 1000);
+        const timer = setInterval(() => upDateCounter(), 3000);
         return () => clearInterval(timer);
     }, [])
 

@@ -1,9 +1,9 @@
 export const getTimeLeft = (timeTo) => {
     const nowTS = Date.now()
-    const msLeft = timeTo - nowTS
     const dInMs = 1000 * 60 * 60 * 24
     const hInMs = 1000 * 60 * 60
     const mInMs = 1000 * 60
+    const msLeft = timeTo - nowTS + hInMs
     const dLeftRaw = msLeft / dInMs
     const days = Math.floor(dLeftRaw)
     const hLeftRaw = ((dLeftRaw - days) * dInMs) / hInMs
