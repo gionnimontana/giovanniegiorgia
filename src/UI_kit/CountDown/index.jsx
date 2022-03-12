@@ -13,8 +13,8 @@ const CountDown = () => {
 
     useEffect(() => {
         upDateCounter()
-        const timer = setTimeout(() => upDateCounter(), 10000);
-        return () => clearTimeout(timer);
+        const timer = setInterval(() => upDateCounter(), 1000);
+        return () => clearInterval(timer);
     }, [])
 
     const upDateCounter = () => {
@@ -24,15 +24,19 @@ const CountDown = () => {
         setMLeft(timeLeft.minutes)
     }
 
+    const between0n2 = n => n >= 1 && n <= 2
+    const iToO = (n) => between0n2(n) ? 'o' : 'i'
+    const eToA = (n) => between0n2(n) ? 'a' : 'e'
+
     return (
         <div className="counter_container">
             <div className="counter_numberBox">
                 <div>{dLeft}</div>
-                <div className="counter_numberLabel">giorni</div>
+                <div className="counter_numberLabel">giorn{iToO(dLeft)}</div>
                 <div>{hLeft}</div>
-                <div className="counter_numberLabel">ore</div>
+                <div className="counter_numberLabel">or{eToA(hLeft)}</div>
                 <div>{mLeft}</div>
-                <div className="counter_numberLabel">minuti</div>
+                <div className="counter_numberLabel">minut{iToO(mLeft)}</div>
             </div>
             {/* <div className="counter_label">alla cerimonia</div> */}
         </div>

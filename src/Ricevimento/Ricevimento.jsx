@@ -33,7 +33,6 @@ const Ricevimento = () => {
         const b = localStorage.getItem('saremoIn')
         const c = localStorage.getItem('confirmed')
         const d = localStorage.getItem('clusterId')
-        console.log(a,b,c,d)
         if (a && b && c && d) {
             setCanEdit(false)
             setCiSaro(Boolean(a))
