@@ -17,7 +17,7 @@ export const refreshWarning = () => {
          'morbido'
      ]
      const cleanedInput = p.replace(" ", "").toLowerCase()
-     if (buzzWords.includes()) {
+     if (buzzWords.includes(cleanedInput)) {
          window.location.href = '/bandoBooster.html'
          return true
      }
