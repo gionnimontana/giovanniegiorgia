@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Badge from "../Badge/Badge";
 import PeopleCard from "../PeopleCard/PeopleCard";
 import './PeopleCards.css'

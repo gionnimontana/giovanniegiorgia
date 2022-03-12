@@ -23,3 +23,5 @@ export const refreshWarning = () => {
      }
      return false
  }
+
+ export const slowly = (f) => setTimeout(() => { f()}, 200)

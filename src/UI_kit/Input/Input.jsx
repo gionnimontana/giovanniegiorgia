@@ -10,7 +10,7 @@ const Input = (p) => {
 
   useEffect(() => {
     document.getElementById(id).value = ''
-  }, [p.resetState])
+  }, [p.resetState, id])
 
   return <div className="input_container">
       <div className={`input_label ${leCN}`}>{p.label}</div>

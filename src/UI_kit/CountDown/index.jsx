@@ -7,22 +7,21 @@ const CountDown = () => {
     const [hLeft, setHLeft] = useState(99)
     const [mLeft, setMLeft] = useState(99)
 
-    const weddingDate = new Date(
-        new Date("Sat, 2 July 2022 15:30:00").toLocaleString("en-US", {timeZone: "Europe/Rome"})
-    );
-
     useEffect(() => {
-        upDateCounter()
+        const weddingDate = new Date(
+            new Date("Sat, 2 July 2022 15:30:00").toLocaleString("en-US", {timeZone: "Europe/Rome"})
+        );
+
+        const upDateCounter = () => {
+            const timeLeft = getTimeLeft(weddingDate)
+            setDLeft(timeLeft.days)
+            setHLeft(timeLeft.hours)
+            setMLeft(timeLeft.minutes)
+        }
+
         const timer = setInterval(() => upDateCounter(), 3000);
         return () => clearInterval(timer);
     }, [])
-
-    const upDateCounter = () => {
-        const timeLeft = getTimeLeft(weddingDate)
-        setDLeft(timeLeft.days)
-        setHLeft(timeLeft.hours)
-        setMLeft(timeLeft.minutes)
-    }
 
     const between0n2 = n => n >= 1 && n <= 2
     const iToO = (n) => between0n2(n) ? 'o' : 'i'

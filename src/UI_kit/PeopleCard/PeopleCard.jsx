@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Badge from "../Badge/Badge";
 import Input from "../Input/Input";
 import NumberButtons from "../NumberButtons/NumberButtons";
 import './PeopleCard.css'

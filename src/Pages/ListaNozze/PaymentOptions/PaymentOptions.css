@@ -1,0 +1,43 @@
+.payment_option_text {
+	font-size: 0.8rem;
+	margin-bottom: 0.8rem;
+}
+
+.payment_option_line {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1rem 0rem;
+}
+
+.payment_option_field {
+	width: 100%;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.payment_option_value {
+	width: 100%;
+	font-size: 0.8rem;
+	max-width: 85vw;
+	overflow: scroll;
+}
+
+.payment_option_img_box {
+	text-align: center;
+	margin-top: 1rem;
+	width: 100%;
+}
+
+#payment_option_satispay_img {
+	width: 12rem;
+}
+
+#payment_option_eth_img {
+	width: 12rem;
+}
+
+#payment_option_btc_img {
+	width: 12rem;
+}

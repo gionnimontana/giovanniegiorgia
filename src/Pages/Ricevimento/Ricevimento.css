@@ -1,0 +1,8 @@
+.ricevimento_ciSaroContainer {
+	display: flex;
+	width: 100%;
+	padding: 1rem 0rem;
+	justify-content: space-between;
+	max-width: 20rem;
+	margin: auto;
+}
