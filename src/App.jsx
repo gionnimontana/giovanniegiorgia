@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 // import Info from './pages/Info/Info'
-import ListaNozze from './pages/ListaNozze/ListaNozze'
+// import ListaNozze from './pages/ListaNozze/ListaNozze'
 import Menu from './pages/Menu/Menu'
 import Login from './pages/Login/Login'
 import Ricevimento from './pages/Ricevimento/Ricevimento'
@@ -33,11 +33,11 @@ function App() {
 						<Ricevimento />
 					</Page>
 				)}
-				{currentView === 'listaNozze' && (
+				{/* {currentView === 'listaNozze' && (
 					<Page label="Lista nozze" goBack={goBack}>
 						<ListaNozze />
 					</Page>
-				)}
+				)} */}
 			</div>
 		</div>
 	)
