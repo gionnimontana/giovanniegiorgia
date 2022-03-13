@@ -3,7 +3,7 @@ import Badge from '../../ui_kit/Badge/Badge'
 import { executeInsert_users, executeDeleteByClusterId } from '../../service/graphql'
 import NumberButtons from '../../ui_kit/NumberButtons/NumberButtons'
 import PeopleCards from '../../ui_kit/PeopleCards/PeopleCards'
-import { genRandomStr, refreshWarning } from '../../utils'
+import { refreshWarning } from '../../utils'
 import './Ricevimento.css'
 
 const maxPeopleNumber = 8
@@ -68,7 +68,7 @@ const Ricevimento = () => {
 
 	const onConfirm = async () => {
 		setLoading(true)
-		const clusterId = cID || genRandomStr()
+		const clusterId = localStorage.getItem('clusterId')
 		if (ciSaro) {
 			const userPromises = confirmed.map((el) => {
 				const payload = {

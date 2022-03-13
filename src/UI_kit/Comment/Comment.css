@@ -1,17 +1,33 @@
 .comment_box {
-    border: solid 0.1rem var(--colorShadeA);
-    border-radius: 1rem;
-    background: white;
-    padding: 0.2rem 0.5rem;
-    margin-bottom: 0.5rem;
+	border: solid 0.1rem var(--colorShadeA);
+	border-radius: 1rem;
+	padding: 0.2rem 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.comment_cross {
+	font-weight: bold;
+	color: var(--colorShadeA);
+	cursor: pointer;
+}
+
+.comment_cross:hover,
+.comment_cross:focus {
+	color: var(--colorShadeE);
+}
+
+.comment_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .comment_author {
-    font-weight: bold;
-    font-size: 0.8rem;
-    color: var(--colorShadeA);
+	font-weight: bold;
+	font-size: 0.8rem;
+	color: var(--colorShadeA);
 }
 
 .comment_message {
-    padding-bottom: 0.2rem;
+	padding-bottom: 0.2rem;
 }

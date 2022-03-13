@@ -1,0 +1,11 @@
+.listanozze_purchasedMessage {
+	border-radius: 1rem;
+	display: flex;
+	padding: 0.5rem;
+	border: solid 0.1rem var(--colorShadeA);
+	margin-bottom: 1rem;
+}
+
+.listanozze_purchasedLabel {
+	margin-left: 1rem;
+}

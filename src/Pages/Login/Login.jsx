@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Input from '../../ui_kit/Input/Input'
-import { easterEgg, slowly } from '../../utils'
+import { easterEgg, genRandomStr, slowly } from '../../utils'
 import './Login.style.css'
 
 const Login = (p) => {
@@ -27,6 +27,9 @@ const Login = (p) => {
 			)
 		if (!name || !surname || password !== process.env.REACT_APP_PASSWORD) return
 
+		const cID = localStorage.getItem('clusterId')
+		const clusterId = cID || genRandomStr()
+		localStorage.setItem('clusterId', clusterId)
 		localStorage.setItem('user', JSON.stringify({ name, surname }))
 
 		slowly(() => p.setView('menu'))
