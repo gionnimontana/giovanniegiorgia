@@ -1,0 +1,23 @@
+.counter_container {
+    color: var(--colorShadeA);
+    max-width: 15rem;
+    margin: auto;
+    margin-bottom: 0.7rem;
+}
+
+.counter_label {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: -0.5rem;
+}
+
+.counter_numberBox {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    align-items: center;
+}
+
+.counter_numberLabel {
+    font-size: 1rem;
+}

@@ -1,0 +1,36 @@
+#columnLayout {
+	display: flex;
+	flex-direction: column;
+	padding: 0px 10px;
+}
+
+.menuButton {
+	font-size: 1.1rem;
+	margin-bottom: 2.2rem;
+	padding: 0.6rem;
+}
+
+#menu_main_container {
+	height: 95vh;
+	max-width: 500px;
+	width: 90vw;
+	margin-top: 0.2rem;
+	overflow: auto;
+}
+
+.ggCover {
+	width: 100%;
+	border-radius: 1rem;
+}
+
+.menu_body_container {
+	padding: 1rem;
+}
+
+.menu_logout {
+	text-decoration: underline;
+	cursor: pointer;
+	text-align: center;
+	color: var(--colorShadeA);
+	margin-top: 1rem;
+}

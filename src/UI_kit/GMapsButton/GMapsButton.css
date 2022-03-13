@@ -1,0 +1,22 @@
+.GMapsButton_container {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  justify-content: center;
+}
+
+.GMapsButton_copyButton {
+  margin-right: 0.5rem;
+  padding: 0.1rem;
+  background: var(--colorShadeA);
+  color: white;
+  cursor: pointer;
+  border-radius: 3rem;
+  width: 1.8rem;
+  text-align: center;
+}
+
+.GMapsButton_copyButton:hover,
+.GMapsButton_copyButton:focus{
+  background: var(--colorShadeC);
+}

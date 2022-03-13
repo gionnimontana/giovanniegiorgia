@@ -1,0 +1,20 @@
+.numberButtons_container {
+  margin: 1rem 0rem;
+}
+
+.numberButtons_buttoncontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.numberButtons_button {
+  margin: 0.5rem;
+}
+
+.numberButtons_label {
+  font-size: 1.2rem;
+  font-family: 'Raleway';
+  color: var(--colorShadeA);
+  font-weight: 600;
+}
