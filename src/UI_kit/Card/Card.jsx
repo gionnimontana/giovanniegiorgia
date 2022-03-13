@@ -13,7 +13,7 @@ const Card = (p) => {
 	return (
 		<div className="cardContainer borderBottom">
 			<div className="cardImageContainer">
-				<img className="cardImage" src={p.img} onClick={openModal} alt="card"/>
+				<img className="cardImage" src={p.img} onClick={openModal} alt="card" />
 			</div>
 			<div className="cardContent">
 				<div className="cardTitle">{p.title}</div>
@@ -21,8 +21,8 @@ const Card = (p) => {
 			</div>
 			<div className="cardOpenModalButton">
 				<div className="card_iconbox" onClick={openModal}>
-					<HeartIcon />
-					<CommentIcon />
+					<HeartIcon value={p.purchased} />
+					<CommentIcon value={p.comments} />
 				</div>
 				<Modal id={p.id} title="">
 					<div className="cardContainer">
@@ -31,7 +31,7 @@ const Card = (p) => {
 							<div className="cardText">{p.text}</div>
 						</div>
 						<div className="cardImageLargeContainer">
-							<img className="cardImageLarge" src={p.img} alt="card modal"/>
+							<img className="cardImageLarge" src={p.img} alt="card modal" />
 						</div>
 					</div>
 					{p.children}

@@ -32,12 +32,31 @@ const Login = (p) => {
 		slowly(() => p.setView('menu'))
 	}
 
+	const onKP = (e) => {
+		if (e.charCode === 13) sw()
+	}
+
 	return (
 		<div className="standardBox">
 			<div>
-				<Input label="Nome:" error={nameError} onChange={(v) => setName(v)} />
-				<Input label="Cognome:" error={surnameError} onChange={(v) => setSurname(v)} />
-				<Input label="Parola d'ordine:" error={passwordError} onChange={(v) => setPassword(v)} />
+				<Input
+					label="Nome:"
+					error={nameError}
+					onChange={(v) => setName(v.target.value)}
+					onKeyPress={onKP}
+				/>
+				<Input
+					label="Cognome:"
+					error={surnameError}
+					onChange={(v) => setSurname(v.target.value)}
+					onKeyPress={onKP}
+				/>
+				<Input
+					label="Parola d'ordine:"
+					error={passwordError}
+					onChange={(v) => setPassword(v.target.value)}
+					onKeyPress={onKP}
+				/>
 				<div id="columnLayout" style={{ marginTop: '3rem' }}>
 					<button className="cake-button menuButton" onClick={sw}>
 						Accedi

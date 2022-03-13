@@ -5,15 +5,17 @@
 }
 
 .menuButton {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	margin-bottom: 2.2rem;
-	padding: 0.8rem;
+	padding: 0.6rem;
 }
 
 #menu_main_container {
-	min-height: 88vh;
+	height: 95vh;
 	max-width: 500px;
 	width: 90vw;
+	margin-top: 0.2rem;
+	overflow: auto;
 }
 
 .ggCover {

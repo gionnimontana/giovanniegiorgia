@@ -105,7 +105,14 @@ const ListaNozze = () => {
 	return (
 		<div>
 			{elements.map((el, index) => (
-				<Card key={index} id={el.id} img={el.img} title={el.title} text={el.text}>
+				<Card
+					key={index}
+					id={el.id}
+					img={el.img}
+					title={el.title}
+					text={el.text}
+					purchased={1}
+					comments={20}>
 					<PayementOptions id={el.id} />
 					<Interactions id={el.id} />
 				</Card>

@@ -34,7 +34,8 @@ const Ricevimento = () => {
 		const b = localStorage.getItem('saremoIn')
 		const c = localStorage.getItem('confirmed')
 		const d = localStorage.getItem('clusterId')
-		if (a && b && c && d) {
+		if (a === 'false') setCiSaro(false)
+		if (a === 'true' && b && c && d) {
 			setCanEdit(false)
 			setCiSaro(Boolean(a))
 			setSaremoIn(Number(b))
@@ -55,9 +56,11 @@ const Ricevimento = () => {
 			alert('Ops, qualcosa è andato storto, ritenta, sarai più fortunato')
 		} else {
 			localStorage.setItem('ciSaro', ciSaro)
-			localStorage.setItem('saremoIn', saremoIn)
-			localStorage.setItem('confirmed', JSON.stringify(confirmed))
-			localStorage.setItem('clusterId', clusterId)
+			if (ciSaro) {
+				localStorage.setItem('saremoIn', saremoIn)
+				localStorage.setItem('confirmed', JSON.stringify(confirmed))
+				localStorage.setItem('clusterId', clusterId)
+			}
 			setCID(clusterId)
 			setCanEdit(false)
 		}
@@ -70,7 +73,7 @@ const Ricevimento = () => {
 			const userPromises = confirmed.map((el) => {
 				const payload = {
 					name: el.name,
-					confirmation: ciSaro,
+					confirmation: true,
 					menu_options: el.selected,
 					clusterId
 				}
