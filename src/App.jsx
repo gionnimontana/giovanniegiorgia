@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Info from './pages/Info/Info'
+// import Info from './pages/Info/Info'
 import ListaNozze from './pages/ListaNozze/ListaNozze'
 import Menu from './pages/Menu/Menu'
 import Login from './pages/Login/Login'
@@ -23,11 +23,11 @@ function App() {
 				{currentView === 'loading' && <div></div>}
 				{currentView === 'login' && <Login setView={setCurrentView} />}
 				{currentView === 'menu' && <Menu setView={setCurrentView} />}
-				{currentView === 'info' && (
+				{/* {currentView === 'info' && (
 					<Page label="Info" goBack={goBack}>
 						<Info />
 					</Page>
-				)}
+				)} */}
 				{currentView === 'ricevimento' && (
 					<Page label="Ricevimento" goBack={goBack}>
 						<Ricevimento />
