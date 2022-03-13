@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import './Modal.style.css'
 
 const Modal = (p) => {
+    const [open, setOpen] = useState(false)
+
     const modalId = `modal-${p.id}`
     const openModal = () => {
         const modal = document.getElementById(modalId);
         modal.style.display = "block";
+        setOpen(true)
     }
     const closeModal = () => {
         const modal = document.getElementById(modalId);
         modal.style.display = "none";
+        setOpen(false)
+        p.callBack && p.callBack()
     }
     return (
         <div>
@@ -26,7 +31,7 @@ const Modal = (p) => {
                         <div onClick={closeModal} className="modal-close">&times;</div>
                     </div>
                     <div className="modal-body">
-                        {p.children}
+                        {open ? p.children : undefined}
                     </div>
                 </div>
             </div>

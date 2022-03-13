@@ -18,7 +18,7 @@ const CountDown = () => {
             setHLeft(timeLeft.hours)
             setMLeft(timeLeft.minutes)
         }
-
+        upDateCounter()
         const timer = setInterval(() => upDateCounter(), 3000);
         return () => clearInterval(timer);
     }, [])

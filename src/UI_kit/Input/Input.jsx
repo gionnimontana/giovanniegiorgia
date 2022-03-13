@@ -18,7 +18,7 @@ const Input = (p) => {
 				id={id}
 				className={`input_field ${feCN}`}
 				onChange={(e) => p.onChange(e.target.value)}
-				style={{ width: p.fullWidth ? '95%' : '16rem' }}
+				style={{ width: p.fw ? '95%' : '16rem' }}
 				{...p}
 			/>
 			{p.error && <div className="input_error_label">*{p.error}</div>}

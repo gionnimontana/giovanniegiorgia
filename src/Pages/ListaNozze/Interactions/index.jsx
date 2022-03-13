@@ -1,12 +1,59 @@
+import { useEffect, useState } from 'react'
+import { getComments, writeComment } from '../../../service/graphql'
+import Comment from '../../../ui_kit/Comment'
 import Input from '../../../ui_kit/Input/Input'
 import './Interactions.css'
 
-const Interactions = (p) => {
+const Interactions = ({id}) => {
+	const [loading, setLoading] = useState(true)
+	const [message, setMessage] = useState()
+	const [comments, setComments] = useState([])
+
+	useEffect(() => {
+		getData(id)
+	}, [id])
+
+	const getData = async (pkgname) => {
+		const {errors, data} = await getComments(pkgname)
+		if (errors) {}
+		if (data) {
+			setComments(data.comments)
+ 		}
+		setLoading(false)
+	}
+
+	const sendMessage = async () => {
+		if (!message) return
+		const user = JSON.parse(localStorage.getItem('user'))
+		const { errors } = await writeComment(message, `${user.name} ${user.surname.charAt(0)}`, id)
+		if (errors) {
+			alert('Ops, qualcosa è andato storto, ritenta, sarai più fortunato')
+		} else {
+			getData(id)
+		}
+	}
+
 	return (
 		<div>
 			<div className="interactions_commentBox">
-				<Input label="Nickname" onChange={() => console.log('change')} fullWidth />
-				<Input label="Messaggio" onChange={() => console.log('change')} fullWidth />
+				{loading ? (
+					<div>Loading...</div>
+				) : (
+					comments.map((el, i) => (
+						<Comment key={i} author={el.author} message={el.message}/>
+					))
+				)}
+				<Input label="Lascia un messaggio (Pubblico):" onChange={(e) => setMessage(e.target.value)} fw={'true'} />
+				{message && (
+					<div className="interactions_senbuttonCase">
+						<button 
+							className="cake-button interactions_sendButton"
+							onClick={sendMessage}
+						>
+							Invia
+						</button>
+					</div>
+				)}
 			</div>
 		</div>
 	)

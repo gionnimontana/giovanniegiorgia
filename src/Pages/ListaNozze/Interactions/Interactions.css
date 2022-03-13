@@ -4,3 +4,13 @@
 	border-radius: 1rem;
 	margin-top: 1rem;
 }
+
+.interactions_sendButton {
+	padding: 0.7rem;
+    width: 8rem;	
+}
+
+.interactions_senbuttonCase {
+	width: 100%;
+	text-align: center;
+}

@@ -60,3 +60,56 @@ export function executeDeleteByClusterId(clusterId) {
   );
 }
 
+export function getCommentsNumber() {
+  const operationsDoc = `
+    query getCommentsNumber {
+      comments {
+        pkgname
+      }
+    }
+  `
+  return fetchGraphQL(
+    operationsDoc,
+    "getCommentsNumber",
+    {}
+  );
+}
+
+export function getComments(pkgname) {
+  const operationsDoc = `
+    query getCommentsNumber {
+      comments (where: {pkgname: {_eq: "${pkgname}"}}) {
+        id,
+        message,
+        author
+      }
+    }
+  `
+  return fetchGraphQL(
+    operationsDoc,
+    "getCommentsNumber",
+    {}
+  );
+}
+
+export function writeComment(message, author, pkgname) {
+
+  const json = JSON.stringify({message, author, pkgname});
+  const unquoted = json.replace(/"([^"]+)":/g, '$1:');
+
+  const mutationString = `
+    mutation insert_comments {
+      insert_comments(objects: ${unquoted}) {
+        returning {
+          id
+        }
+      }
+    }
+  `
+
+  return fetchGraphQL(
+    mutationString,
+    "insert_comments",
+    {}
+  );
+}

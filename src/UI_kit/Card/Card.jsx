@@ -4,27 +4,22 @@ import { CommentIcon, HeartIcon } from '../Icons'
 import './Card.style.css'
 
 const Card = (p) => {
-	const openModal = () => {
-		const modalId = `modal-${p.id}`
-		const modal = document.getElementById(modalId)
-		modal.style.display = 'block'
-	}
 
 	return (
 		<div className="cardContainer borderBottom">
 			<div className="cardImageContainer">
-				<img className="cardImage" src={p.img} onClick={openModal} alt="card" />
+				<img className="cardImage" src={p.img} alt="card" />
 			</div>
 			<div className="cardContent">
 				<div className="cardTitle">{p.title}</div>
 				<div className="cardText">{p.text}</div>
 			</div>
 			<div className="cardOpenModalButton">
-				<div className="card_iconbox" onClick={openModal}>
+				<div className="card_iconbox">
 					<HeartIcon value={p.purchased} />
 					<CommentIcon value={p.comments} />
 				</div>
-				<Modal id={p.id} title="">
+				<Modal id={p.id} title="" callBack={p.callBack}>
 					<div className="cardContainer">
 						<div className="cardContent">
 							<div className="cardTitle">{p.title}</div>
