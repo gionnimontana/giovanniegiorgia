@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
-import Info from './pages/Info/Info'
-import ListaNozze from './pages/ListaNozze/ListaNozze'
-import Menu from './pages/Menu/Menu'
-import Login from './pages/Login/Login'
-import Ricevimento from './pages/Ricevimento/Ricevimento'
-import Page from './ui_kit/Page/Page'
+import Info from './Pages/Info/Info'
+import ListaNozze from './Pages/ListaNozze/ListaNozze'
+import Menu from './Pages/Menu/Menu'
+import Login from './Pages/Login/Login'
+import Ricevimento from './Pages/Ricevimento/Ricevimento'
+import Page from './UI_kit/Page/Page'
 import { slowly } from './utils'
 
 function App() {
