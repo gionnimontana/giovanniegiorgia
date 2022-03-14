@@ -1,10 +1,10 @@
-import Card from '../../ui_kit/Card/Card'
+import Card from '../../UI_kit/Card/Card'
 import PayementOptions from './PaymentOptions'
 import Interactions from './Interactions'
 import elements from './pacchettiNozze'
 import { useEffect, useState } from 'react'
-import { getCommentsNumber } from '../../service/graphql'
-import { FullHeartIcon } from '../../ui_kit/Icons'
+import { getCommentsNumber } from '../../Service/graphql'
+import { FullHeartIcon } from '../../UI_kit/Icons'
 import './ListaNozze.css'
 
 const ListaNozze = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
-import CopyTextCell from '../../../ui_kit/CopyTextCell'
-import ExpansionPanel from '../../../ui_kit/ExpansionPanel/ExpansionPanel'
+import CopyTextCell from '../../../UI_kit/CopyTextCell'
+import ExpansionPanel from '../../../UI_kit/ExpansionPanel/ExpansionPanel'
 import './PaymentOptions.css'
 import sImg from '../../../images/satispayAddress.jpg'
 import eImg from '../../../images/btcAddress.png'
