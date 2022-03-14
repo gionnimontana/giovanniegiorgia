@@ -1,5 +1,5 @@
 import React from 'react'
-import GMapsButton from '../../ui_kit/GMapsButton'
+import GMapsButton from '../../UI_kit/GMapsButton'
 import './Info.css'
 
 const Info = () => {

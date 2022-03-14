@@ -1,7 +1,7 @@
 import React from 'react'
 import './Menu.style.css'
 import background from '../../images/g&g_cover.jpeg'
-import CountDown from '../../ui_kit/CountDown'
+import CountDown from '../../UI_kit/CountDown'
 import { slowly } from '../../utils'
 
 const Menu = (p) => {

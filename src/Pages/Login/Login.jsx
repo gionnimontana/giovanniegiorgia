@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Input from '../../ui_kit/Input/Input'
+import Input from '../../UI_kit/Input/Input'
 import { easterEgg, genRandomStr, slowly } from '../../utils'
 import './Login.style.css'
 
