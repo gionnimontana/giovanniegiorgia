@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { getComments, writeComment } from '../../../service/graphql'
-import Comment from '../../../ui_kit/Comment'
-import Input from '../../../ui_kit/Input/Input'
+import { getComments, writeComment } from '../../../Service/graphql'
+import Comment from '../../../UI_kit/Comment'
+import Input from '../../../UI_kit/Input/Input'
 import './Interactions.css'
 
 const Interactions = ({ id }) => {

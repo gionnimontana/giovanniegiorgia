@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Badge from '../../ui_kit/Badge/Badge'
-import { executeInsert_users, executeDeleteByClusterId } from '../../service/graphql'
-import NumberButtons from '../../ui_kit/NumberButtons/NumberButtons'
-import PeopleCards from '../../ui_kit/PeopleCards/PeopleCards'
+import Badge from '../../UI_kit/Badge/Badge'
+import { executeInsert_users, executeDeleteByClusterId } from '../../Service/graphql'
+import NumberButtons from '../../UI_kit/NumberButtons/NumberButtons'
+import PeopleCards from '../../UI_kit/PeopleCards/PeopleCards'
 import { refreshWarning } from '../../utils'
 import './Ricevimento.css'
 
