@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { getComments, writeComment } from '../../../Service/graphql'
 import Comment from '../../../UI_kit/Comment'
+import { FlatLoader } from '../../../UI_kit/FlatLoader'
+import { FullCommentIcon } from '../../../UI_kit/Icons'
 import Input from '../../../UI_kit/Input/Input'
 import './Interactions.css'
 
@@ -45,11 +47,16 @@ const Interactions = ({ id }) => {
 		setSending(false)
 	}
 
+	const onKP = (e) => {
+		if (e.charCode === 13) sendMessage()
+	}
+
 	return (
 		<div>
 			<div className="interactions_commentBox">
+				<FullCommentIcon className="interactions_commentIcon" />
 				{loading ? (
-					<div>Loading...</div>
+					<FlatLoader />
 				) : (
 					comments.map((el, i) => (
 						<Comment
@@ -66,7 +73,8 @@ const Interactions = ({ id }) => {
 					label="Lascia un messaggio (Pubblico):"
 					onChange={(e) => setMessage(e.target.value)}
 					fw={'true'}
-					resetState={resetInput}
+					resetstate={resetInput}
+					onKeyPress={onKP}
 				/>
 				{message && (
 					<div className="interactions_senbuttonCase">

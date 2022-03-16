@@ -7,11 +7,7 @@ const Info = () => {
 		<div className="info_container">
 			<div className="info_uppertitle">Ci sposiamo!</div>
 			<div className="info_ImageLargeContainer">
-				<img
-					alt="foto_chiesa"
-					className="info_ImageLarge"
-					src="https://www.comoeilsuolago.it/img/chiesa-tremezzo.jpg"
-				/>
+				<img alt="foto_chiesa" className="info_ImageLarge" src="/img/chiesa-tremezzo-min.jpeg" />
 			</div>
 			<div className="info_marginTop info_italic">CERIMONIA</div>
 			<div className="info_marginTop">Chiesa San Lorenzo</div>
@@ -23,11 +19,7 @@ const Info = () => {
 			<div>Ore 15:30</div>
 
 			<div className="info_ImageLargeContainer">
-				<img
-					alt="foto_villa"
-					className="info_ImageLarge"
-					src="https://cdn0.matrimonio.com/vendor/0103/3_2/960/jpg/9-lake-como-wedding-location-venue-villa-monastero-pax_2_110103.jpeg"
-				/>
+				<img alt="foto_villa" className="info_ImageLarge" src="/img/monastero-pax-min.jpeg" />
 			</div>
 			<div className="info_marginTop info_italic">RICEVIMENTO</div>
 			<div className="info_marginTop">Villa Monastero Pax</div>

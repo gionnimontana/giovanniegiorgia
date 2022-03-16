@@ -1,11 +1,6 @@
-#columnLayout {
+.login_bottomBox {
 	display: flex;
 	flex-direction: column;
 	padding: 0px 10px;
-}
-
-.menuButton {
-	font-size: 1.2rem;
-	margin-bottom: 2.2rem;
-	padding: 0.8rem;
+	margin-top: 3rem;
 }

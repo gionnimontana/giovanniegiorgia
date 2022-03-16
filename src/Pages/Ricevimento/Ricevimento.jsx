@@ -137,7 +137,7 @@ const Ricevimento = () => {
 
 					{(ciSaro === false || saremoIn === confirmed.length) && (
 						<button
-							className="cake-button menuButton"
+							className="cake-button bigButton"
 							style={{ marginTop: '4rem', width: '12rem' }}
 							onClick={isLoading ? undefined : onConfirm}>
 							{isLoading ? 'Attendi...' : 'Conferma'}
@@ -153,7 +153,7 @@ const Ricevimento = () => {
 						{!ciSaro && ' ci dispiace che non sarai dei nostri, alla prossima!'}
 					</div>
 					<button
-						className="cake-button menuButton"
+						className="cake-button bigButton"
 						style={{ marginTop: '4rem', width: '12rem', margin: 'auto' }}
 						onClick={() => setCanEdit(true)}>
 						Modifica
