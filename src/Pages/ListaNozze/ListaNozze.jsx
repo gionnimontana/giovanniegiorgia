@@ -36,6 +36,13 @@ const ListaNozze = () => {
 
 	return (
 		<div>
+			<div className="listanozze_header">
+				<FullHeartIcon />
+				<div className="listanozze_headertitle">
+					Grazie a chi vorrà contribuire alla nostra luna di miele
+				</div>
+				<FullHeartIcon />
+			</div>
 			{elements.map((el, index) => (
 				<Card
 					key={index}

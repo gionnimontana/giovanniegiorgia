@@ -6,6 +6,7 @@ import Login from './Pages/Login/Login'
 import Ricevimento from './Pages/Ricevimento/Ricevimento'
 import Page from './UI_kit/Page/Page'
 import { slowly } from './utils'
+import Background from './UI_kit/Background/Background'
 
 function App() {
 	const [currentView, setCurrentView] = useState('login')
@@ -40,9 +41,8 @@ function App() {
 					)}
 				</div>
 			</div>
-			<div className="app_background"></div>
+			<Background />
 		</div>
-
 	)
 }
 

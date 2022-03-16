@@ -2,10 +2,25 @@
 	border-radius: 1rem;
 	display: flex;
 	padding: 0.5rem;
-    background: var(--colorShadeE);
+	background: var(--colorShadeE);
 	margin-bottom: 1rem;
 }
 
 .listanozze_purchasedLabel {
 	margin-left: 1rem;
+}
+
+.listanozze_header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.listanozze_headertitle {
+	font-size: 1.4rem;
+	color: var(--colorShadeA);
+	text-align: center;
+	padding: 1rem;
+	font-weight: bold;
+	font-family: cursive;
 }
