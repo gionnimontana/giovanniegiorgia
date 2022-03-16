@@ -1,3 +1,13 @@
+:root {
+	--backgroundColor: rgb(255, 255, 255);
+	--colorShadeA: rgb(106, 163, 137);
+	--colorShadeB: rgb(121, 186, 156);
+	--colorShadeC: rgb(150, 232, 195);
+	--colorShadeD: rgb(187, 232, 211);
+	--colorShadeE: rgb(236, 252, 245);
+	--errorColor: rgb(196, 72, 246);
+}
+
 body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -12,22 +22,25 @@ body {
 	background-size: cover;
 }
 
+.app_background {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--colorShadeE);
+	opacity: 0.4;
+	background-image:  linear-gradient(30deg, var(--colorShadeB) 12%, transparent 12.5%, transparent 87%, var(--colorShadeB) 87.5%, var(--colorShadeB)), linear-gradient(150deg, var(--colorShadeB) 12%, transparent 12.5%, transparent 87%, var(--colorShadeB) 87.5%, var(--colorShadeB)), linear-gradient(30deg, var(--colorShadeB) 12%, transparent 12.5%, transparent 87%, var(--colorShadeB) 87.5%, var(--colorShadeB)), linear-gradient(150deg, var(--colorShadeB) 12%, transparent 12.5%, transparent 87%, var(--colorShadeB) 87.5%, var(--colorShadeB)), linear-gradient(60deg, var(--colorShadeC) 25%, transparent 25.5%, transparent 75%, var(--colorShadeC) 75%, var(--colorShadeC)), linear-gradient(60deg, var(--colorShadeC) 25%, transparent 25.5%, transparent 75%, var(--colorShadeC) 75%, var(--colorShadeC));
+	background-size: 14px 25px;
+	background-position: 0 0, 0 0, 7px 12px, 7px 12px, 0 0, 7px 12px;
+}
+
 .app_main {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-:root {
-	--backgroundColor: rgb(255, 255, 255);
-	--colorShadeA: rgb(106, 163, 137);
-	--colorShadeB: rgb(121, 186, 156);
-	--colorShadeC: rgb(150, 232, 195);
-	--colorShadeD: rgb(187, 232, 211);
-	--colorShadeE: rgb(236, 252, 245);
-	--errorColor: rgb(196, 72, 246);
 }
 
 .standardBox {
