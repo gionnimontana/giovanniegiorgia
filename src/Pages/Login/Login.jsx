@@ -61,7 +61,7 @@ const Login = (p) => {
 					onKeyPress={onKP}
 				/>
 				<div className="login_bottomBox">
-					<button className="cake-button menuButton" onClick={sw}>
+					<button className="cake-button bigButton" onClick={sw}>
 						Accedi
 					</button>
 				</div>

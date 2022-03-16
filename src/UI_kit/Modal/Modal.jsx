@@ -22,9 +22,9 @@ const Modal = (p) => {
 	}
 	return (
 		<div>
-			<button className="cake-button modal_actionButton" onClick={openModal}>
+			<div className="basic_plain_button modal_actionButton" onClick={openModal}>
 				{'>'}
-			</button>
+			</div>
 			<div id={modalId} className="modal_container">
 				<div className="modal_content standardBox">
 					<div className="modal_header">

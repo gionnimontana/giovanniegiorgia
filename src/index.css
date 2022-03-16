@@ -50,6 +50,12 @@ body {
 	font-family: 'Raleway';
 }
 
+.bigButton {
+	font-size: 1.1rem;
+	margin-bottom: 2.2rem;
+	padding: 0.6rem;
+}
+
 button.cake-button {
 	border: 2px solid var(--colorShadeA);
 	border-radius: 1em;

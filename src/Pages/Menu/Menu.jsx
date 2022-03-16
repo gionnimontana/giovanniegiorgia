@@ -15,7 +15,7 @@ const Menu = (p) => {
 		<div>
 			<div className="standardBox" id="menu_main_container">
 				<div className="ggCoverContainer">
-					<img src={background} className="menu_ggCover" alt="g&g vieste"/>
+					<img src={background} className="menu_ggCover" alt="g&g vieste" />
 				</div>
 				<div className="menu_body_container">
 					<div className="menu_ggLogo">
@@ -24,13 +24,13 @@ const Menu = (p) => {
 					</div>
 					<CountDown />
 					<div className="menu_buttonsContainer">
-						<button className="cake-button menu_button" onClick={sw('info')}>
+						<button className="cake-button bigButton" onClick={sw('info')}>
 							Info
 						</button>
-						<button className="cake-button menu_button" onClick={sw('ricevimento')}>
+						<button className="cake-button bigButton" onClick={sw('ricevimento')}>
 							Ricevimento
 						</button>
-						<button className="cake-button menu_button" onClick={sw('listaNozze')}>
+						<button className="cake-button bigButton" onClick={sw('listaNozze')}>
 							Lista nozze
 						</button>
 					</div>
