@@ -45,7 +45,7 @@ const NumberButtons = ({onSelect, selected, label, labels, allowOther}) => {
             setOtherOption(false)
           }}/>
           <Input
-            onChange={(e) => onSelect(e)}
+            onChange={(e) => onSelect(e.target.value)}
           />
         </div>
 
