@@ -37,13 +37,6 @@ body {
 	background: var(--colorShadeE);
 }
 
-.actionForward {
-	font-size: 1.2rem;
-	font-weight: bold;
-	padding: 0rem 0.8rem;
-	margin-top: 1.5rem;
-}
-
 .cake-button {
 	position: relative;
 	display: inline-block;
@@ -123,18 +116,6 @@ button.cake-button:active::before {
 
 .basic_plain_button:active {
 	background-color: var(--colorShadeC);
-}
-
-#ggLogo {
-	text-align: center;
-	width: 100%;
-	font-family: 'Raleway', cursive;
-	padding: 20px 0px;
-	font-size: 2.2rem;
-	color: var(--colorShadeA);
-	line-height: 2.8rem;
-	text-shadow: 0px 0px 8px #fff;
-	font-weight: 900;
 }
 
 @media only screen and (max-width: 600px) {

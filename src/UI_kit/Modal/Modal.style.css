@@ -1,4 +1,4 @@
-.modal-container {
+.modal_container {
   display: none; 
   position: fixed; 
   z-index: 1; 
@@ -11,14 +11,14 @@
   background-color: rgba(0,0,0,0.4);
 }
 
-.modal-body {
+.modal_body {
   overflow: auto;
   height: 85%;
   width: 100%;
   padding-bottom: 3.5rem;
 }
 
-.modal-content {
+.modal_content {
   background-color: #fefefe;
   margin: auto;
   width: 83%;
@@ -30,6 +30,13 @@
       -ms-animation: fadein 1s; /* Internet Explorer */
         -o-animation: fadein 1s; /* Opera < 12.1 */
           animation: fadein 1s;
+}
+
+.modal_actionButton {
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding: 0rem 0.8rem;
+	margin-top: 1.5rem;
 }
 
 @keyframes fadein {
@@ -49,20 +56,20 @@
     to   { opacity: 1; }
 }
 
-.modal-close {
+.modal_close {
   color: var(--colorShadeA);
   font-weight: bold;
   font-size: 2rem;
 }
 
-.modal-close:hover,
-.modal-close:focus {
+.modal_close:hover,
+.modal_close:focus {
   color: var(--colorShadeC);
   text-decoration: none;
   cursor: pointer;
 }
 
-.modal-title {
+.modal_title {
   font-weight: bold;
   font-family: 'Raleway';
   font-size: 1.3rem;
@@ -72,7 +79,7 @@
   justify-content: center;
 }
 
-.modal-header {
+.modal_header {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -81,7 +88,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .modal-content {
+  .modal_content {
     height: 90vh;
     margin-top: -5rem;
     width: 92%;

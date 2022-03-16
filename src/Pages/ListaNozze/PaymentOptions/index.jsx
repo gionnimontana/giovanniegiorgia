@@ -61,7 +61,7 @@ const PayementOptions = (p) => {
 			<ExpansionPanel title="Criptovalute (BTC o ETH)">
 				<div className="payment_option_text">
 					Vuoi donare in crypto? nessun problema! invia una somma di tua scelta a uno di questi
-					indirizzi. Ricordati di mandare un messaggio con il codice pacchetto che trovi qui sotto
+					indirizzi. Ricordati di mandare un messaggio privato a Giorgia o Giovanni con il codice pacchetto che trovi qui sotto
 					insieme all'id della transazione
 				</div>
 				<div className="payment_option_line">

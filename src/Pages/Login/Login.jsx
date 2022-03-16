@@ -60,7 +60,7 @@ const Login = (p) => {
 					onChange={(v) => setPassword(v.target.value)}
 					onKeyPress={onKP}
 				/>
-				<div id="columnLayout" style={{ marginTop: '3rem' }}>
+				<div className="login_bottomBox">
 					<button className="cake-button menuButton" onClick={sw}>
 						Accedi
 					</button>

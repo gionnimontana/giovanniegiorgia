@@ -8,7 +8,7 @@ import Page from './UI_kit/Page/Page'
 import { slowly } from './utils'
 
 function App() {
-	const [currentView, setCurrentView] = useState('loading')
+	const [currentView, setCurrentView] = useState('login')
 	const goBack = () => slowly(() => setCurrentView('menu'))
 
 	useEffect(() => {
@@ -20,7 +20,6 @@ function App() {
 	return (
 		<div className="app_main">
 			<div>
-				{currentView === 'loading' && <div></div>}
 				{currentView === 'login' && <Login setView={setCurrentView} />}
 				{currentView === 'menu' && <Menu setView={setCurrentView} />}
 				{currentView === 'info' && (

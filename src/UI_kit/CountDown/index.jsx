@@ -23,7 +23,7 @@ const CountDown = () => {
         return () => clearInterval(timer);
     }, [])
 
-    const between0n2 = n => n >= 1 && n <= 2
+    const between0n2 = n => n >= 1 && n < 2
     const iToO = (n) => between0n2(n) ? 'o' : 'i'
     const eToA = (n) => between0n2(n) ? 'a' : 'e'
 

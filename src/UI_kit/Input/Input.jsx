@@ -9,7 +9,7 @@ const Input = (p) => {
 
 	useEffect(() => {
 		document.getElementById(id).value = ''
-	}, [p.resetState, id])
+	}, [p.resetstate, id])
 
 	return (
 		<div className="input_container">
@@ -17,7 +17,6 @@ const Input = (p) => {
 			<input
 				id={id}
 				className={`input_field ${feCN}`}
-				onChange={(e) => p.onChange(e.target.value)}
 				style={{ width: p.fw ? '95%' : '16rem' }}
 				{...p}
 			/>

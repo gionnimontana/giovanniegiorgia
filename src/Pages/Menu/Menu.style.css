@@ -1,10 +1,10 @@
-#columnLayout {
+.menu_buttonsContainer {
 	display: flex;
 	flex-direction: column;
 	padding: 0px 10px;
 }
 
-.menuButton {
+.menu_button {
 	font-size: 1.1rem;
 	margin-bottom: 2.2rem;
 	padding: 0.6rem;
@@ -18,7 +18,7 @@
 	overflow: auto;
 }
 
-.ggCover {
+.menu_ggCover {
 	width: 100%;
 	border-radius: 1rem;
 }
@@ -33,4 +33,16 @@
 	text-align: center;
 	color: var(--colorShadeA);
 	margin-top: 1rem;
+}
+
+.menu_ggLogo {
+	text-align: center;
+	width: 100%;
+	font-family: 'Raleway', cursive;
+	padding: 20px 0px;
+	font-size: 2.2rem;
+	color: var(--colorShadeA);
+	line-height: 2.8rem;
+	text-shadow: 0px 0px 8px #fff;
+	font-weight: 900;
 }
