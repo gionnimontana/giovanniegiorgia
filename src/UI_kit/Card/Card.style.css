@@ -1,9 +1,9 @@
-.cardImage {
+.card_Image {
 	height: 100%;
 	cursor: pointer;
 }
 
-.cardImageContainer {
+.card_ImageContainer {
 	border: 2px solid var(--colorShadeA);
 	border-radius: 1em;
 	order: 0;
@@ -14,12 +14,12 @@
 	justify-content: center;
 }
 
-.cardImageLarge {
+.card_ImageLarge {
 	width: 100%;
 	height: auto;
 }
 
-.cardImageLargeContainer {
+.card_ImageLargeContainer {
 	border-radius: 1em;
 	order: 0;
 	width: 100%;
@@ -31,7 +31,7 @@
 	height: 20rem;
 }
 
-.cardContainer {
+.card_Container {
 	display: flex;
 	padding-bottom: 1rem;
 	align-items: center;
@@ -40,50 +40,52 @@
 	margin: 1rem 0rem;
 }
 
-.cardOpenModalButton {
+.card_OpenModalButton {
 	order: 2;
 	display: flex;
 	width: 5.5rem;
 	justify-content: space-between;
 }
 
-.cardContent {
+.card_Content {
 	width: 100%;
 	padding: 1rem 1rem;
 	order: 1;
 	max-width: 30rem;
+	cursor: pointer;
 }
 
-.cardTitle {
+.card_Title {
 	font-weight: bold;
 	font-family: 'Raleway';
 	font-size: 1.1rem;
 	color: var(--colorShadeA);
 }
 
-.card_iconbox {
+.card__iconbox {
 	width: 2rem;
 	margin-top: 1rem;
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 784px) {
-	.cardContent {
+	.card_Content {
 		order: 2;
 		padding: 1rem 0rem;
 		max-width: 33rem;
 	}
-	.cardOpenModalButton {
+	.card_OpenModalButton {
 		order: 1;
 	}
 }
 
 @media only screen and (max-width: 700px) {
-	.cardImageLarge {
+	.card_ImageLarge {
 		width: auto;
 		height: 20rem;
 	}
 
-	.cardImageLargeContainer {
+	.card_ImageLargeContainer {
 		max-height: 20rem;
 		height: auto;
 	}

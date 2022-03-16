@@ -21,11 +21,11 @@ const Login = (p) => {
 		if (!name) setNameError("non puo' essere vuoto")
 		if (!surname) setSurnameError("non puo' essere vuoto")
 
-		if (password !== process.env.REACT_APP_PASSWORD)
+		if (password.trim() !== process.env.REACT_APP_PASSWORD)
 			setPasswordError(
 				'Password errata (la trovi nella partecipazione, controlla caratteri maiuscoli e minuscoli)'
 			)
-		if (!name || !surname || password !== process.env.REACT_APP_PASSWORD) return
+		if (!name || !surname || password.trim() !== process.env.REACT_APP_PASSWORD) return
 
 		const cID = localStorage.getItem('clusterId')
 		const clusterId = cID || genRandomStr()
