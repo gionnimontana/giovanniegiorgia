@@ -6,12 +6,23 @@ import './PeopleCard.css'
 const PeopleCard = (p) => {
 	const [name, setName] = useState(undefined)
 	const [selected, setSelected] = useState(undefined)
+	const [nameError, setNameError] = useState(undefined)
 	const [rState, setRState] = useState(0)
 
 	const onConfirm = () => {
+		if (!name) {
+			setNameError("il nome non puo' essere vuoto")
+			return
+		}
 		p.onConfirm({ name, selected })
 		setName(undefined)
+		setSelected(undefined)
 		setRState((s) => (s += 1))
+	}
+
+	const onChange = (e) => {
+		if (nameError) setNameError(undefined)
+		setName(e.target.value)
 	}
 
 	return (
@@ -19,8 +30,9 @@ const PeopleCard = (p) => {
 			<div className="peoplecard_header">Partecipante {p.targetNumber}</div>
 			<Input
 				label="Nome e cognome:"
-				onChange={(e) => setName(e.target.value)}
+				onChange={onChange}
 				resetstate={rState}
+				error={nameError}
 			/>
 			<NumberButtons
 				labels={p.allergie}
@@ -29,7 +41,7 @@ const PeopleCard = (p) => {
 				selected={selected}
 				allowOther={true}
 			/>
-			{name && selected && (
+			{selected && (
 				<div className="basic_plain_button peoplecard_button" onClick={onConfirm}>
 					Conferma partecipante
 				</div>
