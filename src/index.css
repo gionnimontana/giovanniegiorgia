@@ -1,3 +1,13 @@
+:root {
+	--backgroundColor: rgb(255, 255, 255);
+	--colorShadeA: rgb(106, 163, 137);
+	--colorShadeB: rgb(121, 186, 156);
+	--colorShadeC: rgb(150, 232, 195);
+	--colorShadeD: rgb(187, 232, 211);
+	--colorShadeE: rgb(236, 252, 245);
+	--errorColor: rgb(196, 72, 246);
+}
+
 body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -18,16 +28,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-:root {
-	--backgroundColor: rgb(255, 255, 255);
-	--colorShadeA: rgb(106, 163, 137);
-	--colorShadeB: rgb(121, 186, 156);
-	--colorShadeC: rgb(150, 232, 195);
-	--colorShadeD: rgb(187, 232, 211);
-	--colorShadeE: rgb(236, 252, 245);
-	--errorColor: rgb(196, 72, 246);
 }
 
 .standardBox {

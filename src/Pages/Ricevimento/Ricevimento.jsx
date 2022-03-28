@@ -10,7 +10,7 @@ const maxPeopleNumber = 8
 const allergieOptions = [
 	'Mangio tutto',
 	'Menu` bambini',
-	'Infante (0-2 anni)',
+	'Infante (0-3 anni)',
 	'Vegetariano',
 	'Vegano',
 	'Celiaco',

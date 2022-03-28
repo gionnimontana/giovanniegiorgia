@@ -9,27 +9,27 @@ const Card = (p) => {
 	const openModal = () => setModalState((v) => v + 1)
 
 	return (
-		<div className="cardContainer borderBottom">
-			<div className="cardImageContainer" onClick={openModal}>
-				<img className="cardImage" src={p.img} alt="card" />
+		<div className="card_Container borderBottom">
+			<div className="card_ImageContainer" onClick={openModal}>
+				<img className="card_Image" src={p.img} alt="card_" />
 			</div>
-			<div className="cardContent">
-				<div className="cardTitle">{p.title}</div>
-				<div className="cardText">{p.text}</div>
+			<div className="card_Content" onClick={openModal}>
+				<div className="card_Title">{p.title}</div>
+				<div className="card_Text">{p.text}</div>
 			</div>
-			<div className="cardOpenModalButton">
-				<div className="card_iconbox" onClick={openModal}>
+			<div className="card_OpenModalButton">
+				<div className="card__iconbox" onClick={openModal}>
 					<HeartIcon value={p.purchased} />
 					<CommentIcon value={p.comments} />
 				</div>
 				<Modal id={p.id} title="" callBack={p.callBack} openModal={modalState}>
-					<div className="cardContainer">
-						<div className="cardContent">
-							<div className="cardTitle">{p.title}</div>
-							<div className="cardText">{p.text}</div>
+					<div className="card_Container">
+						<div className="card_Content">
+							<div className="card_Title">{p.title}</div>
+							<div className="card_Text">{p.text}</div>
 						</div>
-						<div className="cardImageLargeContainer">
-							<img className="cardImageLarge" src={p.img} alt="card modal" />
+						<div className="card_ImageLargeContainer">
+							<img className="card_ImageLarge" src={p.img} alt="card_ modal" />
 						</div>
 					</div>
 					{p.children}

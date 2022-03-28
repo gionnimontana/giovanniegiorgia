@@ -6,6 +6,7 @@ import Login from './Pages/Login/Login'
 import Ricevimento from './Pages/Ricevimento/Ricevimento'
 import Page from './UI_kit/Page/Page'
 import { slowly } from './utils'
+import Background from './UI_kit/Background/Background'
 
 function App() {
 	const [currentView, setCurrentView] = useState('login')
@@ -18,26 +19,29 @@ function App() {
 	}, [])
 
 	return (
-		<div className="app_main">
-			<div>
-				{currentView === 'login' && <Login setView={setCurrentView} />}
-				{currentView === 'menu' && <Menu setView={setCurrentView} />}
-				{currentView === 'info' && (
-					<Page label="Info" goBack={goBack}>
-						<Info />
-					</Page>
-				)}
-				{currentView === 'ricevimento' && (
-					<Page label="Ricevimento" goBack={goBack}>
-						<Ricevimento />
-					</Page>
-				)}
-				{currentView === 'listaNozze' && (
-					<Page label="Lista nozze" goBack={goBack}>
-						<ListaNozze />
-					</Page>
-				)}
+		<div>
+			<div className="app_main">
+				<div>
+					{currentView === 'login' && <Login setView={setCurrentView} />}
+					{currentView === 'menu' && <Menu setView={setCurrentView} />}
+					{currentView === 'info' && (
+						<Page label="Info" goBack={goBack}>
+							<Info />
+						</Page>
+					)}
+					{currentView === 'ricevimento' && (
+						<Page label="Ricevimento" goBack={goBack}>
+							<Ricevimento />
+						</Page>
+					)}
+					{currentView === 'listaNozze' && (
+						<Page label="Lista nozze" goBack={goBack}>
+							<ListaNozze />
+						</Page>
+					)}
+				</div>
 			</div>
+			<Background />
 		</div>
 	)
 }
