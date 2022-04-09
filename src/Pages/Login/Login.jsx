@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { countRegistration } from '../../Service/graphql'
 import Input from '../../UI_kit/Input/Input'
-import { easterEgg, genRandomStr, slowly } from '../../utils'
+import { easterEgg, genRandomStr } from '../../utils'
 import './Login.style.css'
 
 const Login = (p) => {
@@ -11,7 +12,7 @@ const Login = (p) => {
 	const [password, setPassword] = useState(undefined)
 	const [passwordError, setPasswordError] = useState(undefined)
 
-	const sw = () => {
+	const sw = async () => {
 		if (easterEgg(password)) return
 
 		setNameError(undefined)
@@ -31,8 +32,8 @@ const Login = (p) => {
 		const clusterId = cID || genRandomStr()
 		localStorage.setItem('clusterId', clusterId)
 		localStorage.setItem('user', JSON.stringify({ name, surname }))
-
-		slowly(() => p.setView('menu'))
+		await countRegistration({name: `${name} ${surname}`, timestamp: `${Date.now()}`, clusterId})
+		p.setView('menu')
 	}
 
 	const onKP = (e) => {
