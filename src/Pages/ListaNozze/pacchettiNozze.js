@@ -52,7 +52,7 @@ const packages = [
 		id: 'tamponi',
 		img: '/img/tamponi-min.jpeg',
 		title: 'Tamponi',
-		text: "Perchè dove se il tampone non ce l'hai?",
+		text: "Perchè dove vai se il tampone non ce l'hai?",
 		purchased: 0
 	},
 	{
