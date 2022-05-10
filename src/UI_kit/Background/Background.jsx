@@ -18,7 +18,7 @@ const Background = () => {
 						{' '}
 						<g opacity="1">
 							{' '}
-							<g clip-path="url(#radius-clip)" transform="scale(0.5)">
+							<g clipPath="url(#radius-clip)" transform="scale(0.5)">
 								{' '}
 								<svg width="52.5" height="52.5" viewBox="0 0 100 100">
 									{' '}
@@ -44,7 +44,7 @@ const Background = () => {
 									/>{' '}
 								</svg>{' '}
 							</g>{' '}
-							<g clip-path="url(#radius-clip)" transform="translate(30, 30) scale(0.5)">
+							<g clipPath="url(#radius-clip)" transform="translate(30, 30) scale(0.5)">
 								{' '}
 								<svg width="52.5" height="52.5" viewBox="0 0 100 100">
 									{' '}
@@ -70,7 +70,7 @@ const Background = () => {
 									/>{' '}
 								</svg>{' '}
 							</g>{' '}
-							<g clip-path="url(#radius-clip)" transform="translate(0, 30) scale(0.5)">
+							<g clipPath="url(#radius-clip)" transform="translate(0, 30) scale(0.5)">
 								{' '}
 								<svg width="52.5" height="52.5" viewBox="0 0 100 100">
 									{' '}
@@ -96,7 +96,7 @@ const Background = () => {
 									/>{' '}
 								</svg>{' '}
 							</g>{' '}
-							<g clip-path="url(#radius-clip)" transform="translate(30, 0) scale(0.5)">
+							<g clipPath="url(#radius-clip)" transform="translate(30, 0) scale(0.5)">
 								{' '}
 								<svg width="52.5" height="52.5" viewBox="0 0 100 100">
 									{' '}

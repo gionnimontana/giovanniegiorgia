@@ -15,8 +15,25 @@ async function fetchGraphQL(operationsDoc, operationName, variables) {
 	return await result.json()
 }
 
+export function countRegistration(usersArray) {
+	const json = JSON.stringify(usersArray)
+	const unquoted = json.replace(/"([^"]+)":/g, '$1:')
+
+	const mutationString = `
+    mutation insert_registrations {
+      insert_registrations(objects: ${unquoted}) {
+        returning {
+          id
+        }
+      }
+    }
+  `
+
+	return fetchGraphQL(mutationString, 'insert_registrations', {})
+}
+
 export function executeInsert_users(usersArray) {
-	const json = JSON.stringify(usersArray) // {"name":"John Smith"}
+	const json = JSON.stringify(usersArray)
 	const unquoted = json.replace(/"([^"]+)":/g, '$1:')
 
 	const mutationString = `

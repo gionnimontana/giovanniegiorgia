@@ -39,7 +39,7 @@ const packages = [
 		img: '/img/polinesia-min.jpeg',
 		title: 'Polinesia - Una destinazione da sogno',
 		text: "Papeete, Mo'orea, Bora Bora. Le sognamo da una vita e non vediamo l'ora di nuotarci intorno!",
-		purchased: 0
+		purchased: 1
 	},
 	{
 		id: 'bagno-squali',
@@ -52,7 +52,7 @@ const packages = [
 		id: 'tamponi',
 		img: '/img/tamponi-min.jpeg',
 		title: 'Tamponi',
-		text: "Perchè dove se il tampone non ce l'hai?",
+		text: "Perchè dove vai se il tampone non ce l'hai?",
 		purchased: 0
 	},
 	{
