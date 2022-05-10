@@ -39,7 +39,7 @@ const packages = [
 		img: '/img/polinesia-min.jpeg',
 		title: 'Polinesia - Una destinazione da sogno',
 		text: "Papeete, Mo'orea, Bora Bora. Le sognamo da una vita e non vediamo l'ora di nuotarci intorno!",
-		purchased: 0
+		purchased: 1
 	},
 	{
 		id: 'bagno-squali',
