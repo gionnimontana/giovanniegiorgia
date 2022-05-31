@@ -46,7 +46,7 @@ const packages = [
 		img: '/img/bagno-squali-min.jpeg',
 		title: 'Cose che fanno paura a Giorgia',
 		text: "Un bagno con gli squali in Polinesia, un'esperienza hippie a San Francisco...",
-		purchased: 0
+		purchased: 1
 	},
 	{
 		id: 'tamponi',
