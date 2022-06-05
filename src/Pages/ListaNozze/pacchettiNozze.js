@@ -49,13 +49,6 @@ const packages = [
 		purchased: 1
 	},
 	{
-		id: 'tamponi',
-		img: '/img/tamponi-min.jpeg',
-		title: 'Tamponi',
-		text: "Perchè dove vai se il tampone non ce l'hai?",
-		purchased: 0
-	},
-	{
 		id: 'voli-di-ritorno',
 		img: '/img/voli-di-ritorno-min.jpeg',
 		title: 'Volo di ritorno',
