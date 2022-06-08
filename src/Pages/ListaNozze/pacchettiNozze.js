@@ -25,7 +25,7 @@ const packages = [
 		img: '/img/giro-al-parchetto-min.jpeg',
 		title: 'Giro al parchetto',
 		text: 'Sequoia National Park, Monument Valley, Grand Canyon, Page Canyon, Bryce Canyon. Li acchiapperemo tutti!',
-		purchased: 0
+		purchased: 3
 	},
 	{
 		id: 'big-city-life',
