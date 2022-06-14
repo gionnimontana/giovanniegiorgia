@@ -4,7 +4,7 @@ const packages = [
 		img: '/img/voli-aerei-min.jpeg',
 		title: 'Voli aerei',
 		text: 'Milano - San Francisco, Los Angeles - Papeete. Regalaci un buon viaggio!',
-		purchased: 0
+		purchased: 1
 	},
 	{
 		id: 'noleggio-auto',
