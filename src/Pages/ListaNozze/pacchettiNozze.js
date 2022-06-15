@@ -11,14 +11,14 @@ const packages = [
 		img: '/img/noleggio-auto-min.jpeg',
 		title: 'Noleggio auto',
 		text: "Da San Francisco fino al cuore dell'Arizona. 'Se un uomo apre la portiera dell’auto alla moglie, o è nuova l’auto o è nuova la moglie'",
-		purchased: 0
+		purchased: 1
 	},
 	{
 		id: 'san-francisco',
 		img: '/img/san-francisco-min.jpeg',
 		title: 'San Francisco',
 		text: 'Dalle Painted Ladies ad Alcatraz, da North Beach alla 49-Mile drive, da Mission al Golden Gate Bridge',
-		purchased: 0
+		purchased: 1
 	},
 	{
 		id: 'giro-al-parchetto',
@@ -39,7 +39,7 @@ const packages = [
 		img: '/img/polinesia-min.jpeg',
 		title: 'Polinesia - Una destinazione da sogno',
 		text: "Papeete, Mo'orea, Bora Bora. Le sognamo da una vita e non vediamo l'ora di nuotarci intorno!",
-		purchased: 1
+		purchased: 2
 	},
 	{
 		id: 'bagno-squali',
@@ -53,7 +53,7 @@ const packages = [
 		img: '/img/voli-di-ritorno-min.jpeg',
 		title: 'Volo di ritorno',
 		text: 'E se dovesse mancare, ce ne faremo una ragione',
-		purchased: 0
+		purchased: 2
 	}
 ]
 
