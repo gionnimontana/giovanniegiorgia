@@ -32,7 +32,7 @@ const packages = [
 		img: '/img/big-cities-min.jpeg',
 		title: 'Big city life - Metropoli Americane',
 		text: 'Los Angeles e Las Vegas. Il 50% di quello che donate qui li spenderemo in fast foods, il resto finiranno tutti su un tavolo da BlackJack!',
-		purchased: 0
+		purchased: 1
 	},
 	{
 		id: 'polinesia',
@@ -46,7 +46,7 @@ const packages = [
 		img: '/img/bagno-squali-min.jpeg',
 		title: 'Cose che fanno paura a Giorgia',
 		text: "Un bagno con gli squali in Polinesia, un'esperienza hippie a San Francisco...",
-		purchased: 1
+		purchased: 3
 	},
 	{
 		id: 'voli-di-ritorno',
