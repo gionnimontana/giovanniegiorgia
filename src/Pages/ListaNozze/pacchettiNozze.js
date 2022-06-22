@@ -4,7 +4,7 @@ const packages = [
 		img: '/img/voli-aerei-min.jpeg',
 		title: 'Voli aerei',
 		text: 'Milano - San Francisco, Los Angeles - Papeete. Regalaci un buon viaggio!',
-		purchased: 2
+		purchased: 3
 	},
 	{
 		id: 'noleggio-auto',
@@ -18,7 +18,7 @@ const packages = [
 		img: '/img/san-francisco-min.jpeg',
 		title: 'San Francisco',
 		text: 'Dalle Painted Ladies ad Alcatraz, da North Beach alla 49-Mile drive, da Mission al Golden Gate Bridge',
-		purchased: 1
+		purchased: 2
 	},
 	{
 		id: 'giro-al-parchetto',
@@ -39,14 +39,14 @@ const packages = [
 		img: '/img/polinesia-min.jpeg',
 		title: 'Polinesia - Una destinazione da sogno',
 		text: "Papeete, Mo'orea, Bora Bora. Le sognamo da una vita e non vediamo l'ora di nuotarci intorno!",
-		purchased: 2
+		purchased: 4
 	},
 	{
 		id: 'bagno-squali',
 		img: '/img/bagno-squali-min.jpeg',
 		title: 'Cose che fanno paura a Giorgia',
 		text: "Un bagno con gli squali in Polinesia, un'esperienza hippie a San Francisco...",
-		purchased: 3
+		purchased: 4
 	},
 	{
 		id: 'voli-di-ritorno',
