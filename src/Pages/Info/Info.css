@@ -41,6 +41,21 @@
 	margin-top: 2rem;
 }
 
+.info_parkingButtonContainer {
+	display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+	margin-bottom: 1rem;
+}
+
+.info_ImageParking {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
 @media only screen and (max-width: 535px) {
 	.info_ImageLarge {
 		width: auto;
