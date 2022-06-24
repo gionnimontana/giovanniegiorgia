@@ -18,7 +18,7 @@ const packages = [
 		img: '/img/san-francisco-min.jpeg',
 		title: 'San Francisco',
 		text: 'Dalle Painted Ladies ad Alcatraz, da North Beach alla 49-Mile drive, da Mission al Golden Gate Bridge',
-		purchased: 2
+		purchased: 4
 	},
 	{
 		id: 'giro-al-parchetto',
