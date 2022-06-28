@@ -13,7 +13,10 @@ const Input = (p) => {
 
 	return (
 		<div className="input_container">
-			<div className={`input_label ${leCN}`}>{p.label}</div>
+			<div className={`input_label ${leCN}`}>
+				{p.icon ? p.icon : null}
+				{p.label}
+			</div>
 			<input
 				id={id}
 				className={`input_field ${feCN}`}

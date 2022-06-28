@@ -36,3 +36,9 @@ export const slowly = (f) =>
 	setTimeout(() => {
 		f()
 	}, 200)
+
+
+export const scrollToBottom = (id) => {
+	const element = document.getElementById(id);
+	element.scrollTop = element.scrollHeight;
+}

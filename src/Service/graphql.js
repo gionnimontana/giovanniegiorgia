@@ -75,16 +75,27 @@ export function getCommentsNumber() {
 }
 
 export function getComments(pkgname) {
-	const operationsDoc = `
+	const operationsDoc = pkgname === 'all' 
+  ? `
     query getCommentsNumber {
-      comments (where: {pkgname: {_eq: "${pkgname}"}}) {
+      comments {
         id,
         message,
         author,
         clusterId
       }
     }
-  `
+    `
+  : `
+      query getCommentsNumber {
+        comments (where: {pkgname: {_eq: "${pkgname}"}}) {
+          id,
+          message,
+          author,
+          clusterId
+        }
+      }
+    `
 	return fetchGraphQL(operationsDoc, 'getCommentsNumber', {})
 }
 

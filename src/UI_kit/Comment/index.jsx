@@ -29,7 +29,9 @@ const Comment = ({ id, author, message, clusterId, updateComments }) => {
 		<div
 			className="comment_box"
 			style={{
-				background: sameAuthor ? 'var(--colorShadeD)' : 'white'
+				background: sameAuthor ? 'var(--colorShadeD)' : 'white',
+				marginLeft: sameAuthor ? '15px' : '0',
+				marginRight: sameAuthor ? '0' : '15px'
 			}}>
 			<div className="comment_header">
 				<div className="comment_author">{author}:</div>

@@ -12,7 +12,7 @@ const Menu = (p) => {
 	}
 
 	return (
-		<div>
+		<>
 			<div className="standardBox" id="menu_main_container">
 				<div className="ggCoverContainer">
 					<img src={background} className="menu_ggCover" alt="g&g vieste" />
@@ -24,6 +24,9 @@ const Menu = (p) => {
 					</div>
 					<CountDown />
 					<div className="menu_buttonsContainer">
+						<button className="cake-button bigButton" onClick={sw('chat')}>
+							Chat
+						</button>
 						<button className="cake-button bigButton" onClick={sw('info')}>
 							Info
 						</button>
@@ -39,7 +42,7 @@ const Menu = (p) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 

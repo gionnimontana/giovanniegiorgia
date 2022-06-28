@@ -3,6 +3,7 @@ import Info from './Pages/Info/Info'
 import ListaNozze from './Pages/ListaNozze/ListaNozze'
 import Menu from './Pages/Menu/Menu'
 import Login from './Pages/Login/Login'
+import Chat from './Pages/Chat/Chat'
 import Ricevimento from './Pages/Ricevimento/Ricevimento'
 import Page from './UI_kit/Page/Page'
 import { slowly } from './utils'
@@ -23,6 +24,7 @@ function App() {
 			<div className="app_main">
 				<div>
 					{currentView === 'login' && <Login setView={setCurrentView} />}
+					{currentView === 'chat' && <Chat setView={setCurrentView} />}
 					{currentView === 'menu' && <Menu setView={setCurrentView} />}
 					{currentView === 'info' && (
 						<Page label="Info" goBack={goBack}>
