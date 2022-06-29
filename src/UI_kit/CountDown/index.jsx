@@ -9,7 +9,7 @@ const CountDown = () => {
 
     useEffect(() => {
         const weddingDate = new Date(
-            new Date("Sat, 2 July 2022 15:30:00").toLocaleString("en-US", {timeZone: "Europe/Rome"})
+            new Date("Sat, 2 July 2022 14:30:00").toLocaleString("en-US", {timeZone: "Europe/Rome"})
         );
 
         const upDateCounter = () => {
