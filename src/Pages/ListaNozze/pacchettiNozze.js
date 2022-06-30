@@ -25,21 +25,21 @@ const packages = [
 		img: '/img/giro-al-parchetto-min.jpeg',
 		title: 'Giro al parchetto',
 		text: 'Sequoia National Park, Monument Valley, Grand Canyon, Page Canyon, Bryce Canyon. Li acchiapperemo tutti!',
-		purchased: 6
+		purchased: 9
 	},
 	{
 		id: 'big-city-life',
 		img: '/img/big-cities-min.jpeg',
 		title: 'Big city life - Metropoli Americane',
 		text: 'Los Angeles e Las Vegas. Il 50% di quello che donate qui li spenderemo in fast foods, il resto finiranno tutti su un tavolo da BlackJack!',
-		purchased: 3
+		purchased: 4
 	},
 	{
 		id: 'polinesia',
 		img: '/img/polinesia-min.jpeg',
 		title: 'Polinesia - Una destinazione da sogno',
 		text: "Papeete, Mo'orea, Bora Bora. Le sognamo da una vita e non vediamo l'ora di nuotarci intorno!",
-		purchased: 7
+		purchased: 10
 	},
 	{
 		id: 'bagno-squali',
