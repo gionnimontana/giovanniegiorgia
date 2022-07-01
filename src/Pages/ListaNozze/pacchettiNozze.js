@@ -11,7 +11,7 @@ const packages = [
 		img: '/img/noleggio-auto-min.jpeg',
 		title: 'Noleggio auto',
 		text: "Da San Francisco fino al cuore dell'Arizona. 'Se un uomo apre la portiera dell’auto alla moglie, o è nuova l’auto o è nuova la moglie'",
-		purchased: 1
+		purchased: 2
 	},
 	{
 		id: 'san-francisco',
@@ -25,21 +25,21 @@ const packages = [
 		img: '/img/giro-al-parchetto-min.jpeg',
 		title: 'Giro al parchetto',
 		text: 'Sequoia National Park, Monument Valley, Grand Canyon, Page Canyon, Bryce Canyon. Li acchiapperemo tutti!',
-		purchased: 6
+		purchased: 10
 	},
 	{
 		id: 'big-city-life',
 		img: '/img/big-cities-min.jpeg',
 		title: 'Big city life - Metropoli Americane',
 		text: 'Los Angeles e Las Vegas. Il 50% di quello che donate qui li spenderemo in fast foods, il resto finiranno tutti su un tavolo da BlackJack!',
-		purchased: 3
+		purchased: 5
 	},
 	{
 		id: 'polinesia',
 		img: '/img/polinesia-min.jpeg',
 		title: 'Polinesia - Una destinazione da sogno',
 		text: "Papeete, Mo'orea, Bora Bora. Le sognamo da una vita e non vediamo l'ora di nuotarci intorno!",
-		purchased: 7
+		purchased: 12
 	},
 	{
 		id: 'bagno-squali',
