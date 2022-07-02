@@ -30,9 +30,9 @@ const Menu = (p) => {
 						<button className="cake-button bigButton" onClick={sw('info')}>
 							Info
 						</button>
-						<button className="cake-button bigButton" onClick={sw('ricevimento')}>
+						{/* <button className="cake-button bigButton" onClick={sw('ricevimento')}>
 							Ricevimento
-						</button>
+						</button> */}
 						<button className="cake-button bigButton" onClick={sw('listaNozze')}>
 							Lista nozze
 						</button>

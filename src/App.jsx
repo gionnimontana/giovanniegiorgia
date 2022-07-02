@@ -15,7 +15,7 @@ function App() {
 
 	useEffect(() => {
 		const data = localStorage.getItem('user')
-		if (data) setCurrentView('menu')
+		if (data) setCurrentView('chat')
 		else setCurrentView('login')
 	}, [])
 
