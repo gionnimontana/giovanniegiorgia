@@ -22,14 +22,14 @@ const Menu = (p) => {
 						<div>Giovanni e Giorgia</div>
 						<div>2 Luglio 2022</div>
 					</div>
-					<CountDown />
+					{/* <CountDown /> */}
 					<div className="menu_buttonsContainer">
 						<button className="cake-button bigButton" onClick={sw('chat')}>
 							Chat
 						</button>
-						<button className="cake-button bigButton" onClick={sw('info')}>
+						{/* <button className="cake-button bigButton" onClick={sw('info')}>
 							Info
-						</button>
+						</button> */}
 						{/* <button className="cake-button bigButton" onClick={sw('ricevimento')}>
 							Ricevimento
 						</button> */}
